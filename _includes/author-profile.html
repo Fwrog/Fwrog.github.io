@@ -1,29 +1,40 @@
 {% if page.author and site.data.authors[page.author] %}
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
+{% assign page_lang = page.lang | default: "en" %}
+{% assign author_bio = author.bio %}
+{% assign author_location = author.location %}
+{% assign author_employer = author.employer %}
+{% assign profile_description = site.description %}
+{% if page_lang == "zh" %}
+  {% if author.bio_zh %}{% assign author_bio = author.bio_zh %}{% endif %}
+  {% if author.location_zh %}{% assign author_location = author.location_zh %}{% endif %}
+  {% if author.employer_zh %}{% assign author_employer = author.employer_zh %}{% endif %}
+  {% if site.description_zh %}{% assign profile_description = site.description_zh %}{% endif %}
+{% endif %}
 
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
 
   <div class="author__avatar">
-    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}">
+    <img src="{{ author.avatar | relative_url }}" class="author__avatar" alt="{{ author.name }}">
   </div>
 
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if author_bio %}<p class="author__bio">{{ author_bio }}</p>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
     <ul class="author__urls social-icons">
-      {% if site.description %}
-        <li><div style="white-space: normal; margin-bottom: 1em;">{{ site.description }}</div></li>
+      {% if profile_description %}
+        <li><div style="white-space: normal; margin-bottom: 1em;">{{ profile_description }}</div></li>
       {% endif %}
-      {% if author.location %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
+      {% if author_location %}
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author_location }}</li>
       {% endif %}
-      {% if author.employer %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
+      {% if author_employer %}
+        <li><i class="fas fa-fw fa-university" aria-hidden="true"></i> {{ author_employer }}</li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
@@ -65,7 +76,7 @@
         <li><a href="https://bitbucket.org/{{ author.bitbucket }}"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
       {% endif %}
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
       {% endif %}
       {% if author.stackoverflow %}
         <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>

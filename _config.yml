@@ -7,8 +7,10 @@
 
 # Site Settings
 title                    : "Yikai WU"
-description              : "M.Sc. student in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University, working across urban computing, smart transport, remote sensing, computer vision, and AI for science."
+description              : "M.Sc. student in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University, focused on geospatial AI, urban sensing, computer vision/RGB-D, and reproducible remote-sensing workflows."
+description_zh           : "香港理工大学城市信息学与智慧城市硕士生，关注地理空间 AI、城市感知、计算机视觉/RGB-D 和可复现遥感工作流。"
 repository               : "Fwrog/fwrog.github.io"
+lang                     : "en"
 google_scholar_stats_use_cdn : false
 
 # google analytics
@@ -24,8 +26,11 @@ author:
   name             : "Yikai WU"
   avatar           : "images/profile-yikai-wu.png"
   bio              : "M.Sc. Student, Urban Informatics and Smart Cities"
+  bio_zh           : "城市信息学与智慧城市硕士生"
   location         : "Hong Kong, China"
+  location_zh      : "中国香港"
   employer         : "The Hong Kong Polytechnic University"
+  employer_zh      : "香港理工大学"
   pubmed           : 
   googlescholar    :
   email            : "yi-kai.wu@connect.polyu.hk"

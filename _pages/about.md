@@ -2,145 +2,323 @@
 permalink: /
 title: ""
 excerpt: ""
+lang: en
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<span class='anchor' id='about-me'></span>
+<span class="anchor" id="about-me"></span>
 
-I am an M.Sc. student in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University. I received my B.Eng. in Remote Sensing Science and Technology from Southwest Jiaotong University, where I trained in digital image processing, photogrammetry and remote sensing, 3D laser scanning, and computer vision. My research interests include urban computing, smart transport, computer vision, and AI for science. My work spans remote sensing-based ecological assessment, high-resolution GPP inversion, machine vision for railway construction, NeRF-based 3D reconstruction of historic buildings, and medical AI applications. I use Google Earth Engine, MATLAB, Python, LaTeX, C/C++, and C# to turn spatial data and model outputs into reproducible research workflows.
+<section class="portfolio-hero">
+  <div class="hero-copy">
+    <p class="section-kicker">M.Sc. student, Urban Informatics and Smart Cities</p>
+    <h1>Yikai Wu</h1>
+    <p class="hero-subtitle">Geospatial AI, urban sensing, computer vision / RGB-D, and reproducible remote-sensing workflows for the built environment.</p>
+    <p>I am an M.Sc. student at The Hong Kong Polytechnic University, with a B.Eng. background in Remote Sensing Science and Technology from Southwest Jiaotong University. My work is converging on a practical research question: how spatial data, visual sensing, and reproducible computation can support more reliable urban and environmental analysis.</p>
+    <div class="hero-actions" aria-label="Primary links">
+      <a class="portfolio-button button-primary" href="#featured-projects"><i class="fas fa-layer-group" aria-hidden="true"></i> View projects</a>
+      <a class="portfolio-button" href="mailto:yi-kai.wu@connect.polyu.hk"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+      <a class="portfolio-button" href="https://github.com/Fwrog"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+      <a class="portfolio-button" href="/zh/"><i class="fas fa-globe-asia" aria-hidden="true"></i> 中文</a>
+    </div>
+  </div>
+  <div class="snapshot-grid" aria-label="Research snapshots">
+    <article class="snapshot-card">
+      <span class="mini-icon"><i class="fas fa-city" aria-hidden="true"></i></span>
+      <h2>Urban Sensing & Geospatial AI</h2>
+      <p>Street-view, mobile GIS, spatial analytics, and smart-transport questions that connect city-scale data with interpretable evidence.</p>
+    </article>
+    <article class="snapshot-card">
+      <span class="mini-icon"><i class="fas fa-camera-retro" aria-hidden="true"></i></span>
+      <h2>Computer Vision & RGB-D</h2>
+      <p>RealSense calibration, image/depth alignment, machine vision, and 3D reconstruction workflows for infrastructure and built environments.</p>
+    </article>
+    <article class="snapshot-card">
+      <span class="mini-icon"><i class="fas fa-satellite" aria-hidden="true"></i></span>
+      <h2>Remote Sensing Workflows</h2>
+      <p>Google Earth Engine, HLS imagery, ecological indicators, GPP inversion, and agent-readable workflows that can be reviewed and rerun.</p>
+    </article>
+  </div>
+</section>
 
-# News
+<section class="portfolio-section" id="featured-projects">
+  <div class="section-heading">
+    <p class="section-kicker">Selected evidence</p>
+    <h1>Featured Projects</h1>
+    <p>Three projects that best connect my research interests with concrete artifacts: public code, reproducible workflows, or research outputs.</p>
+  </div>
 
-- *Sep 2025*: Started the M.Sc. program in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University.
-- *Jul 2025*: Completed an undergraduate thesis on high-resolution GPP inversion for Chengdu using HLS v2.0 imagery, FLUXNET observations, and machine learning models.
-- *Jun 2025*: Received the B.Eng. degree in Remote Sensing Science and Technology from Southwest Jiaotong University.
-- *2025*: Co-authored a review on optimization methods for low-altitude aircraft operations in *Journal of Transportation Engineering and Information*.
-- *2024*: Published a review article on urban ecological evaluation methods based on remote sensing indexes in *Highlights in Science, Engineering and Technology*.
-- *May 2024*: Received the Third Prize in the "Challenge Cup" competition at Southwest Jiaotong University.
+  <div class="featured-grid">
+    <article class="feature-card">
+      <img src="/images/projects/gee-agent-workflow.jpg" alt="GEE agent workflow preview">
+      <div class="card-body">
+        <p class="card-label">Geospatial workflow</p>
+        <h2>GEE Agent Skill: Plan-First Earth Engine Harness</h2>
+        <p><strong>Problem.</strong> Natural-language geospatial requests are hard to make safe, reviewable, and reproducible before live Earth Engine export.</p>
+        <p><strong>Method.</strong> CLI contract, YAML plan schema, local evidence/RAG notes, template rendering, static validation, live preflight, confirmed export, and task monitoring.</p>
+        <p><strong>Output.</strong> Public harness with a verified Hong Kong 2024 16-day NDVI CSV workflow as a regression-style example.</p>
+        <div class="tag-row">
+          <span>Python</span><span>Google Earth Engine</span><span>Jinja2</span><span>CLI</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Fwrog/gee-agent-skill">GitHub</a>
+          <a href="https://github.com/Fwrog/gee-agent-skill#run-the-demo">Demo workflow</a>
+        </div>
+      </div>
+    </article>
 
-# Education
+    <article class="feature-card">
+      <img src="/images/projects/realsense-charuco.png" alt="RealSense ChArUco calibration target">
+      <div class="card-body">
+        <p class="card-label">Computer vision / RGB-D</p>
+        <h2>RealSense Calibration Tools</h2>
+        <p><strong>Problem.</strong> RGB-D experiments need repeatable camera calibration, printable targets, and visual QC before downstream reconstruction or defect measurement.</p>
+        <p><strong>Method.</strong> OpenCV ChArUco calibration, RealSense factory-parameter export, depth-to-color alignment checks, and an HTML calibration report.</p>
+        <p><strong>Output.</strong> GitHub-ready Python toolkit for Intel RealSense D435i workflows, with SOPs and local-output boundaries.</p>
+        <div class="tag-row">
+          <span>Python</span><span>OpenCV</span><span>RealSense SDK</span><span>RGB-D</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Fwrog/realsense_calibration_tools">GitHub</a>
+          <a href="https://github.com/Fwrog/realsense_calibration_tools#typical-workflow">Workflow</a>
+        </div>
+      </div>
+    </article>
 
-**The Hong Kong Polytechnic University**, Hong Kong, China  
-*M.Sc. in Urban Informatics and Smart Cities, Sep 2025 - Present*
+    <article class="feature-card">
+      <img src="/images/projects/gpp-inversion.png" alt="Abstract GPP inversion map">
+      <div class="card-body">
+        <p class="card-label">Remote sensing research</p>
+        <h2>High-Resolution GPP Inversion for Chengdu</h2>
+        <p><strong>Problem.</strong> Fine-scale urban ecological assessment needs vegetation productivity estimates that connect satellite imagery with ground observations.</p>
+        <p><strong>Method.</strong> HLS v2.0 imagery, FLUXNET observations, Google Earth Engine, Python/MATLAB processing, and LSTM/SVM model experiments by vegetation type.</p>
+        <p><strong>Output.</strong> Undergraduate thesis workflow and high-resolution GPP map for Chengdu; public packaging is a future portfolio task.</p>
+        <div class="tag-row">
+          <span>HLS v2.0</span><span>FLUXNET</span><span>GEE</span><span>ML</span>
+        </div>
+        <div class="card-links">
+          <span class="muted-link">Thesis artifact</span>
+          <span class="muted-link">Code packaging pending</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
-- Coursework: Advanced Geographic Information Systems, Urban and Geospatial Big Data Analysis, Advanced Mobile GIS and LBS, Remote Sensing Image Processing.
+<section class="portfolio-section journey-section" id="academic-journey">
+  <div class="section-heading">
+    <p class="section-kicker">Path and research formation</p>
+    <h1>Academic Journey</h1>
+    <p>My path runs from remote sensing and photogrammetry training in Chengdu to urban informatics and geospatial AI work in Hong Kong.</p>
+  </div>
 
-**Southwest Jiaotong University**, Chengdu, China  
-*B.Eng. in Remote Sensing Science and Technology, Sep 2021 - Jun 2025*
+  <div class="journey-layout">
+    <div class="journey-map-card" aria-label="Academic route from Chengdu to Hong Kong">
+      <svg class="journey-map" viewBox="0 0 640 420" role="img" aria-labelledby="journey-map-title journey-map-desc">
+        <title id="journey-map-title">Chengdu to Hong Kong academic route</title>
+        <desc id="journey-map-desc">A lightweight map-like diagram linking Chengdu and Hong Kong.</desc>
+        <path class="map-shape" d="M123 225 C150 168 211 119 279 104 C348 88 430 100 493 135 C551 168 576 220 548 270 C520 323 444 354 362 347 C276 340 204 317 154 280 C128 261 115 244 123 225 Z"/>
+        <path class="map-shape inner" d="M253 142 C303 119 378 124 436 151 C493 178 516 220 493 258 C466 304 394 322 325 304 C260 287 222 245 224 201 C225 176 235 154 253 142 Z"/>
+        <path class="route-line" d="M209 238 C270 191 351 183 444 276"/>
+        <circle class="route-dot" cx="209" cy="238" r="10"/>
+        <circle class="route-dot accent" cx="444" cy="276" r="10"/>
+        <text x="174" y="225" class="map-label">Chengdu</text>
+        <text x="462" y="292" class="map-label">Hong Kong</text>
+        <text x="159" y="254" class="map-sub">SWJTU</text>
+        <text x="462" y="318" class="map-sub">PolyU</text>
+      </svg>
+      <p class="map-caption">The map is intentionally simple: it supports the narrative rather than acting as a full GIS visualization.</p>
+    </div>
 
-- Average marks: 84.44/100.
-- Coursework: Digital Image Processing, Selected Topics on Photogrammetry and Remote Sensing, 3D Laser Scanning Technology, Computer Vision and Pattern Recognition.
+    <div class="timeline">
+      <article class="timeline-item">
+        <span class="timeline-date">2021 - 2025</span>
+        <h2>Southwest Jiaotong University, Chengdu</h2>
+        <p>B.Eng. in Remote Sensing Science and Technology. Built foundations in digital image processing, photogrammetry, remote sensing, 3D laser scanning, computer vision, and engineering surveying.</p>
+      </article>
+      <article class="timeline-item">
+        <span class="timeline-date">2023 - 2025</span>
+        <h2>Research training and thesis work</h2>
+        <p>Worked on railway machine vision, NeRF-based historic-building reconstruction, remote-sensing ecological review, and high-resolution GPP inversion for Chengdu.</p>
+      </article>
+      <article class="timeline-item">
+        <span class="timeline-date">2025 - Present</span>
+        <h2>The Hong Kong Polytechnic University, Hong Kong</h2>
+        <p>M.Sc. in Urban Informatics and Smart Cities. Current coursework and portfolio work emphasize advanced GIS, urban and geospatial big data analysis, mobile GIS/LBS, remote sensing image processing, and reproducible urban analytics.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-# Research Interests
+<section class="portfolio-section" id="github-highlights">
+  <div class="section-heading">
+    <p class="section-kicker">Public code and reproducibility</p>
+    <h1>GitHub / Repo Highlights</h1>
+    <p>These repositories are selected for evidence quality rather than quantity. They show data pipelines, calibration workflows, GIS rendering, Android LBS design, and research-tool packaging.</p>
+  </div>
 
-<div class="research-focus">
-  <span class="focus-pill">Urban Computing</span>
-  <span class="focus-pill">Smart Transport</span>
-  <span class="focus-pill">Computer Vision</span>
-  <span class="focus-pill">AI for Science</span>
-  <span class="focus-pill">Remote Sensing</span>
-  <span class="focus-pill">Spatial Data Science</span>
-</div>
+  <div class="repo-grid">
+    <article class="repo-card">
+      <div class="repo-title"><i class="fab fa-github" aria-hidden="true"></i><h2>gee-agent-skill</h2></div>
+      <p>Agent-native command-line harness for Google Earth Engine: plan, evidence search, template render, validation, preflight, export, monitor, and trace artifacts.</p>
+      <div class="tag-row"><span>Python</span><span>GEE</span><span>Reproducibility</span></div>
+      <p class="repo-note"><strong>Next polish:</strong> add more domain recipes beyond the Hong Kong NDVI regression examples.</p>
+      <a href="https://github.com/Fwrog/gee-agent-skill">Open repository</a>
+    </article>
 
-# Publications
+    <article class="repo-card">
+      <div class="repo-title"><i class="fab fa-github" aria-hidden="true"></i><h2>realsense_calibration_tools</h2></div>
+      <p>Toolkit for printable calibration targets, D435i parameter export, ChArUco color calibration, RGB-D alignment QC, and report generation.</p>
+      <div class="tag-row"><span>Python</span><span>OpenCV</span><span>RealSense</span></div>
+      <p class="repo-note"><strong>Next polish:</strong> add a compact result gallery from a real calibration package after privacy review.</p>
+      <a href="https://github.com/Fwrog/realsense_calibration_tools">Open repository</a>
+    </article>
 
-1. W. Fan, J. Xiao, **Y. Wu**, et al., "A Review of Optimization Methods for Low-Altitude Aircraft Operations," *Journal of Transportation Engineering and Information*, pp. 1-24, 2025. DOI: [10.19961/j.cnki.1672-4747.2025.06.044](https://doi.org/10.19961/j.cnki.1672-4747.2025.06.044). Chinese.
+    <article class="repo-card image-repo-card">
+      <img src="/images/projects/hk-film-map.jpg" alt="HKFilmMap concept banner">
+      <div class="repo-title"><i class="fab fa-github" aria-hidden="true"></i><h2>HKFilmMap</h2></div>
+      <p>Android LBS project for Hong Kong film locations with a Python data pipeline, local SQLite seed database, Google Maps/Firebase integration, and route planning logic.</p>
+      <div class="tag-row"><span>Java</span><span>Android</span><span>LBS</span><span>SQLite</span></div>
+      <a href="https://github.com/Fwrog/HKFilmMap">Open repository</a>
+    </article>
 
-2. **Y. Wu**, "Research Progress of Urban Ecological Evaluation Methods Based on Remote Sensing Indexes," *Highlights in Science, Engineering and Technology*, vol. 108, pp. 27-33, 2024. DOI: [10.54097/rm8c6t44](https://doi.org/10.54097/rm8c6t44).
+    <article class="repo-card image-repo-card">
+      <img src="/images/projects/china-chorokit.png" alt="ChinaChoroKit choropleth map preview">
+      <div class="repo-title"><i class="fab fa-github" aria-hidden="true"></i><h2>ChinaChoroKit</h2></div>
+      <p>Configuration-driven Python toolkit for province-level China choropleth maps with nine-dash-line handling, legends, scale bars, and PNG/SVG export.</p>
+      <div class="tag-row"><span>Python</span><span>GeoPandas</span><span>Cartography</span></div>
+      <a href="https://github.com/Fwrog/ChinaChoroKit">Open repository</a>
+    </article>
 
-3. Y. Zhang, **Y. Wu**, R. Ai, Q. Zhang, J. Lin, Z. Liu, L. Kang, and R. Ai, "Machine Learning in Alzheimer's Disease: A Comprehensive Review of Methods, Data Modalities, and Future Directions." In preparation.
+    <article class="repo-card">
+      <div class="repo-title"><i class="fab fa-github" aria-hidden="true"></i><h2>Academic Gantt Tool</h2></div>
+      <p>Small Python utility that turns CSV/Markdown templates into academic-style Gantt charts, with English/Chinese templates and PDF/PNG/SVG export.</p>
+      <div class="tag-row"><span>Python</span><span>Visualization</span><span>Writing workflow</span></div>
+      <p class="repo-note"><strong>Best role:</strong> a supporting workflow/tooling example, not a main research project.</p>
+      <a href="https://github.com/Fwrog/Academic-Gantt-A-Pythonic-Tool-for-Scholarly-Timelines">Open repository</a>
+    </article>
+  </div>
+</section>
 
-# Selected Projects
+<section class="portfolio-section" id="publications">
+  <div class="section-heading compact-heading">
+    <p class="section-kicker">Research writing</p>
+    <h1>Publications & Manuscripts</h1>
+  </div>
 
-<div class='paper-box project-box'><div class='paper-box-image'><div><div class="badge">Remote Sensing</div><img src='images/projects/gpp-inversion.png' alt="Abstract GPP inversion map" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+  <div class="publication-groups">
+    <div class="status-column">
+      <h2>Published</h2>
+      <ol class="publication-list">
+        <li>
+          W. Fan, J. Xiao, <strong>Y. Wu</strong>, et al., "A Review of Optimization Methods for Low-Altitude Aircraft Operations," <em>Journal of Transportation Engineering and Information</em>, pp. 1-24, 2025. Chinese.
+          <a href="https://doi.org/10.19961/j.cnki.1672-4747.2025.06.044">DOI</a>
+        </li>
+        <li>
+          <strong>Y. Wu</strong>, "Research Progress of Urban Ecological Evaluation Methods Based on Remote Sensing Indexes," <em>Highlights in Science, Engineering and Technology</em>, vol. 108, pp. 27-33, 2024.
+          <a href="https://doi.org/10.54097/rm8c6t44">DOI</a>
+        </li>
+      </ol>
+    </div>
+    <div class="status-column">
+      <h2>In preparation</h2>
+      <ol class="publication-list">
+        <li>
+          Y. Zhang, <strong>Y. Wu</strong>, R. Ai, Q. Zhang, J. Lin, Z. Liu, L. Kang, and R. Ai, "Machine Learning in Alzheimer's Disease: A Comprehensive Review of Methods, Data Modalities, and Future Directions."
+        </li>
+      </ol>
+      <p class="disclaimer">Manuscripts are separated from published work to keep publication status clear and conservative.</p>
+    </div>
+  </div>
+</section>
 
-## GPP Inversion and High-Resolution Mapping
+<section class="portfolio-section" id="methods-skills">
+  <div class="section-heading compact-heading">
+    <p class="section-kicker">Methods and tools</p>
+    <h1>Skills as Research Capabilities</h1>
+  </div>
 
-<p class="meta-line">Undergraduate Thesis | Advisor: Prof. WU Xiaodan, Southwest Jiaotong University | Apr 2024 - Jul 2025</p>
+  <div class="method-grid">
+    <article>
+      <h2><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Geospatial & Remote Sensing</h2>
+      <p>Google Earth Engine, HLS/Landsat/Sentinel workflows, ecological indices, GPP inversion, spatial data processing, GIS visualization.</p>
+    </article>
+    <article>
+      <h2><i class="fas fa-cube" aria-hidden="true"></i> Computer Vision & 3D</h2>
+      <p>OpenCV, ChArUco/ArUco calibration, RealSense RGB-D alignment, Labelme datasets, YOLOv8 experiments, NeRF-based reconstruction.</p>
+    </article>
+    <article>
+      <h2><i class="fas fa-code" aria-hidden="true"></i> Programming & Modeling</h2>
+      <p>Python, MATLAB, C/C++, C#, Java/Android, machine-learning experiments, data cleaning, model evaluation, report automation.</p>
+    </article>
+    <article>
+      <h2><i class="fas fa-vial" aria-hidden="true"></i> Research Workflow</h2>
+      <p>Plan-first workflows, reproducible command-line tools, GitHub documentation, LaTeX, Markdown, template-based reports, conservative claim tracking.</p>
+    </article>
+  </div>
+</section>
 
-- Developed a data processing pipeline in Google Earth Engine, MATLAB, and Python to integrate Harmonized Landsat and Sentinel-2 (HLS v2.0) imagery with FLUXNET ground observations.
-- Designed a two-stage inversion strategy by training independent LSTM and SVM models for sub-vegetation types, then matching pixels to their corresponding model.
-- Generated a high-resolution GPP map of the Chengdu region for future product validation and fine-scale ecological studies.
-</div>
-</div>
+<section class="portfolio-section" id="updates-education">
+  <div class="section-heading compact-heading">
+    <p class="section-kicker">Current status</p>
+    <h1>Education, Updates & Experience</h1>
+  </div>
 
-<div class='paper-box project-box'><div class='paper-box-image'><div><div class="badge">Computer Vision</div><img src='images/projects/railway-vision.png' alt="Railway construction vision detection illustration" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+  <div class="two-column-list">
+    <div>
+      <h2>Recent updates</h2>
+      <ul class="clean-list">
+        <li><strong>Sep 2025:</strong> Started the M.Sc. program in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University.</li>
+        <li><strong>Jul 2025:</strong> Completed undergraduate thesis work on high-resolution GPP inversion for Chengdu.</li>
+        <li><strong>Jun 2025:</strong> Received the B.Eng. degree in Remote Sensing Science and Technology from Southwest Jiaotong University.</li>
+        <li><strong>2024-2025:</strong> Continued research writing across transportation optimization, remote-sensing ecological assessment, and medical AI review work.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Education and internships</h2>
+      <ul class="clean-list">
+        <li><strong>The Hong Kong Polytechnic University:</strong> M.Sc. in Urban Informatics and Smart Cities, 2025 - Present.</li>
+        <li><strong>Southwest Jiaotong University:</strong> B.Eng. in Remote Sensing Science and Technology, 2021 - 2025. Average marks: 84.44/100.</li>
+        <li><strong>Faculty of Geosciences and Engineering, SWJTU:</strong> engineering-survey internship with total station, RTK, CP III processing, and C# coordinate/database tooling.</li>
+        <li><strong>Zhengzhou Metro Line 8 Project:</strong> subway-construction data collection internship.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-## Machine Vision for Railway Construction
+<section class="portfolio-section" id="additional-research">
+  <div class="section-heading compact-heading">
+    <p class="section-kicker">Earlier and adjacent work</p>
+    <h1>Additional Research Experience</h1>
+    <p>These projects are useful context, but they support the main research image rather than expanding it in every direction.</p>
+  </div>
 
-<p class="meta-line">Student Research Training Program | VRLAB, Advisor: Prof. CHEN Min, Southwest Jiaotong University | Apr 2023 - May 2024</p>
-
-- Explored machine vision workflows for identifying advanced support conduits in railway construction scenarios.
-- Built a Labelme dataset with more than 6,000 images and tested YOLOv8 on a public dataset (COCO128).
-- Reported AP results in the 0.5-0.8 range; the exact metric definition should be confirmed before publication-facing claims.
-</div>
-</div>
-
-<div class='paper-box project-box'><div class='paper-box-image'><div><div class="badge">3D Vision</div><img src='images/projects/nerf-heritage.png' alt="NeRF historic building reconstruction illustration" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-## NeRF-Based Historic Building Modeling
-
-<p class="meta-line">Student Research Training Program | Advisor: Prof. LIU Guoxiang, Southwest Jiaotong University | Apr 2024 - Jul 2024</p>
-
-- Adopted a joint data collection strategy using UAVs and intelligent robot cars to reduce missing data and improve scene coverage.
-- Improved traditional 3D reconstruction workflows with a NeRF-based field-function fitting strategy.
-- Verified the reconstruction workflow on Wenshu Monastery in Chengdu.
-</div>
-</div>
-
-<div class='paper-box project-box'><div class='paper-box-image'><div><div class="badge">AI for Science</div><img src='images/projects/medical-ai.png' alt="Medical AI multimodal diagnosis illustration" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-## Machine Learning in Medical Research
-
-<p class="meta-line">Advisors: Prof. ZHANG Yimeng, Southwest Jiaotong University; Dr. AI Ruixue, University of Oslo | Nov 2024 - Present</p>
-
-- Co-authored a review on machine learning applications in Alzheimer's disease diagnosis, contributing literature synthesis, the initial draft, and figure design.
-- Worked on an ongoing transfer learning study for oral disease diagnosis in collaboration with the West China School of Medicine.
-- Designed prompt-based experiments to benchmark diagnostic behavior against large language models on an external validation dataset.
-</div>
-</div>
-
-<div class='paper-box project-box'><div class='paper-box-image'><div><div class="badge">Urban Ecology</div><img src='images/projects/remote-sensing-indexes.png' alt="Remote sensing ecological index illustration" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-## Remote Sensing Indexes for Urban Ecological Assessment
-
-<p class="meta-line">Research Training Program | Advisor: Prof. YAN Lei, Peking University | Jan 2024 - Apr 2024</p>
-
-- Reviewed the interdisciplinary characteristics of remote sensing-based urban ecological assessment.
-- Wrote a review article on the development of urban ecological evaluation methods using remote sensing indexes.
-- This work connects the publication on remote sensing indexes with broader interests in urban computing and environmental monitoring.
-</div>
-</div>
-
-# Internships
-
-**Faculty of Geosciences and Engineering, Southwest Jiaotong University**  
-*Summer Intern | Supervisor: Prof. YANG Xuefeng | Jun 2024 - Jul 2024*
-
-- Collected total station and RTK satellite positioning data.
-- Processed engineering survey data using professional software such as CP III.
-- Programmed a C# tool to convert geodetic coordinates from text format and designed related databases for data management.
-
-**Zhengzhou Metro Line 8 Project**, Zhengzhou, China  
-*Summer Intern | Jul 2023 - Aug 2023*
-
-- Assisted with data collection for subway underground construction.
-
-# Honors and Awards
-
-- *May 2024*: "Challenge Cup" Third Prize, Southwest Jiaotong University.
-- *Sep 2022*: Third Prize Scholarship, Southwest Jiaotong University.
-
-# Skills
-
-- **Programming and tools**: Python, Google Earth Engine, MATLAB, C/C++, C#, LaTeX.
-- **Research methods**: remote sensing image processing, geospatial data analysis, photogrammetry, 3D reconstruction, machine learning, computer vision.
-- **Applied domains**: urban informatics, smart transport, ecological assessment, medical AI.
+  <div class="compact-project-grid">
+    <article>
+      <img src="/images/projects/railway-vision.png" alt="Railway construction vision detection illustration">
+      <h2>Machine Vision for Railway Construction</h2>
+      <p>Labelme dataset construction, YOLOv8 testing, and visual inspection workflows for advanced support conduits in railway construction contexts.</p>
+      <div class="tag-row"><span>Computer vision</span><span>YOLOv8</span><span>Dataset</span></div>
+    </article>
+    <article>
+      <img src="/images/projects/nerf-heritage.png" alt="NeRF historic building reconstruction illustration">
+      <h2>NeRF-Based Historic Building Modeling</h2>
+      <p>UAV and robot-car collection strategy with NeRF-based reconstruction workflow verified on Wenshu Monastery in Chengdu.</p>
+      <div class="tag-row"><span>NeRF</span><span>3D reconstruction</span><span>Heritage</span></div>
+    </article>
+    <article>
+      <img src="/images/projects/remote-sensing-indexes.png" alt="Remote sensing ecological index illustration">
+      <h2>Remote Sensing Indexes for Urban Ecology</h2>
+      <p>Review work on urban ecological evaluation methods using remote-sensing indexes, connected to broader urban environmental monitoring interests.</p>
+      <div class="tag-row"><span>Review</span><span>Urban ecology</span><span>Remote sensing</span></div>
+    </article>
+    <article>
+      <img src="/images/projects/medical-ai.png" alt="Medical AI multimodal diagnosis illustration">
+      <h2>Machine Learning in Medical Research</h2>
+      <p>Literature synthesis, figure design, transfer-learning exploration, and prompt-based diagnostic benchmarking. Kept as adjacent AI research experience.</p>
+      <div class="tag-row"><span>Medical AI</span><span>Review</span><span>Benchmarking</span></div>
+    </article>
+  </div>
+</section>

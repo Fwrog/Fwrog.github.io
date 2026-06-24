@@ -1,28 +1,38 @@
-# main links links
+# Main navigation. English and Chinese pages share one file; the masthead
+# chooses labels and anchors from page.lang.
 main:
-  - title: "About"
-    url: "/#about-me"
+  - title_en: "Projects"
+    title_zh: "代表项目"
+    url_en: "/#featured-projects"
+    url_zh: "/zh/#featured-projects"
 
-  - title: "News"
-    url: "/#news"
+  - title_en: "Journey"
+    title_zh: "学术旅程"
+    url_en: "/#academic-journey"
+    url_zh: "/zh/#academic-journey"
 
-  - title: "Education"
-    url: "/#education"
+  - title_en: "GitHub"
+    title_zh: "GitHub"
+    url_en: "/#github-highlights"
+    url_zh: "/zh/#github-highlights"
 
-  - title: "Research"
-    url: "/#research-interests"
+  - title_en: "Publications"
+    title_zh: "论文"
+    url_en: "/#publications"
+    url_zh: "/zh/#publications"
 
-  - title: "Publications"
-    url: "/#publications"
+  - title_en: "Methods"
+    title_zh: "方法能力"
+    url_en: "/#methods-skills"
+    url_zh: "/zh/#methods-skills"
 
-  - title: "Projects"
-    url: "/#selected-projects"
+  - title_en: "Updates"
+    title_zh: "动态"
+    url_en: "/#updates-education"
+    url_zh: "/zh/#updates-education"
 
-  - title: "Internships"
-    url: "/#internships"
-
-  - title: "Awards"
-    url: "/#honors-and-awards"
-
-  - title: "Skills"
-    url: "/#skills"
+  - title_en: "中文"
+    title_zh: "English"
+    url_en: "/zh/"
+    url_zh: "/"
+    class: "language-link"
