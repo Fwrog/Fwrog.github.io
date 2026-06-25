@@ -441,50 +441,48 @@ h1:before, .anchor:before {
     background: linear-gradient(180deg, #fff 0%, #f8fbfd 100%);
 }
 
-.journey-map {
-    display: block;
+.leaflet-journey-map {
     width: 100%;
-    height: auto;
+    min-height: 310px;
+    overflow: hidden;
+    border: 1px solid #d9e5ee;
+    border-radius: 8px;
+    background: #eef4f8;
 }
 
-.map-shape {
-    fill: #f4f8fb;
-    stroke: #cfdce7;
-    stroke-width: 3;
+.leaflet-journey-map .leaflet-control-attribution {
+    font-size: .62rem;
 }
 
-.map-shape.inner {
-    fill: #fff;
-    stroke-width: 2;
+.map-fallback {
+    padding: 1rem;
+    color: var(--portfolio-muted);
+    font-size: .9rem;
 }
 
-.route-line {
-    fill: none;
-    stroke: var(--portfolio-blue);
-    stroke-width: 4;
-    stroke-linecap: round;
-    stroke-dasharray: 9 10;
-}
+.journey-map-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    margin-top: .75rem;
 
-.route-dot {
-    fill: var(--portfolio-blue);
-    stroke: #fff;
-    stroke-width: 4;
-}
+    span {
+        display: inline-flex;
+        align-items: center;
+        gap: .35rem;
+        min-height: 1.7rem;
+        padding: .25rem .52rem;
+        border: 1px solid #d8e3ec;
+        border-radius: 5px;
+        background: #fff;
+        color: #2d455d;
+        font-size: .76rem;
+        line-height: 1.1;
+    }
 
-.route-dot.accent {
-    fill: var(--portfolio-teal);
-}
-
-.map-label {
-    fill: var(--portfolio-ink);
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.map-sub {
-    fill: var(--portfolio-muted);
-    font-size: 16px;
+    i {
+        color: var(--portfolio-teal);
+    }
 }
 
 .map-caption,
@@ -541,6 +539,40 @@ h1:before, .anchor:before {
 .timeline-date {
     color: var(--portfolio-amber);
     font-size: .82rem;
+    font-weight: 700;
+}
+
+.research-milestones {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .85rem;
+    margin-top: 1rem;
+
+    article {
+        padding: .95rem;
+        border: 1px solid var(--portfolio-line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 10px 28px rgba(19, 32, 47, .04);
+    }
+
+    h2 {
+        margin: .2rem 0 .4rem;
+        font-size: .98rem;
+        line-height: 1.35;
+    }
+
+    p {
+        margin: 0;
+        color: var(--portfolio-muted);
+        font-size: .9rem;
+        line-height: 1.55;
+    }
+}
+
+.milestone-date {
+    color: var(--portfolio-amber);
+    font-size: .78rem;
     font-weight: 700;
 }
 
@@ -673,7 +705,8 @@ h1:before, .anchor:before {
     .publication-groups,
     .two-column-list,
     .method-grid,
-    .compact-project-grid {
+    .compact-project-grid,
+    .research-milestones {
         grid-template-columns: 1fr;
     }
 

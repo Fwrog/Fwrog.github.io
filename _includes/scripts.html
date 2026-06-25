@@ -1,4 +1,81 @@
 <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+<script>
+  (function () {
+    if (!window.L) {
+      return;
+    }
+
+    var locations = {
+      chengdu: {
+        labelEn: "Southwest Jiaotong University, Chengdu",
+        labelZh: "西南交通大学，成都",
+        coords: [30.7522, 103.9865]
+      },
+      hongKong: {
+        labelEn: "The Hong Kong Polytechnic University, Hong Kong",
+        labelZh: "香港理工大学，香港",
+        coords: [22.3047, 114.1796]
+      }
+    };
+
+    function initJourneyMap(el) {
+      if (el.dataset.initialized === "true") {
+        return;
+      }
+      el.dataset.initialized = "true";
+
+      var isZh = el.dataset.mapLang === "zh";
+      var map = L.map(el, {
+        zoomControl: true,
+        scrollWheelZoom: false,
+        attributionControl: true
+      });
+
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+      }).addTo(map);
+
+      var route = [
+        locations.chengdu.coords,
+        locations.hongKong.coords
+      ];
+
+      L.polyline(route, {
+        color: "#164c73",
+        weight: 3,
+        opacity: 0.85,
+        dashArray: "8 9"
+      }).addTo(map);
+
+      L.circleMarker(locations.chengdu.coords, {
+        radius: 7,
+        color: "#ffffff",
+        weight: 3,
+        fillColor: "#164c73",
+        fillOpacity: 1
+      }).addTo(map).bindPopup(isZh ? locations.chengdu.labelZh : locations.chengdu.labelEn);
+
+      L.circleMarker(locations.hongKong.coords, {
+        radius: 7,
+        color: "#ffffff",
+        weight: 3,
+        fillColor: "#0f766e",
+        fillOpacity: 1
+      }).addTo(map).bindPopup(isZh ? locations.hongKong.labelZh : locations.hongKong.labelEn);
+
+      map.fitBounds(route, {
+        padding: [36, 36],
+        maxZoom: 5
+      });
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll(".leaflet-journey-map"), initJourneyMap);
+  })();
+</script>
 
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}

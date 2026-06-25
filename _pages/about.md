@@ -115,21 +115,16 @@ redirect_from:
   </div>
 
   <div class="journey-layout">
-    <div class="journey-map-card" aria-label="Academic route from Chengdu to Hong Kong">
-      <svg class="journey-map" viewBox="0 0 640 420" role="img" aria-labelledby="journey-map-title journey-map-desc">
-        <title id="journey-map-title">Chengdu to Hong Kong academic route</title>
-        <desc id="journey-map-desc">A lightweight map-like diagram linking Chengdu and Hong Kong.</desc>
-        <path class="map-shape" d="M123 225 C150 168 211 119 279 104 C348 88 430 100 493 135 C551 168 576 220 548 270 C520 323 444 354 362 347 C276 340 204 317 154 280 C128 261 115 244 123 225 Z"/>
-        <path class="map-shape inner" d="M253 142 C303 119 378 124 436 151 C493 178 516 220 493 258 C466 304 394 322 325 304 C260 287 222 245 224 201 C225 176 235 154 253 142 Z"/>
-        <path class="route-line" d="M209 238 C270 191 351 183 444 276"/>
-        <circle class="route-dot" cx="209" cy="238" r="10"/>
-        <circle class="route-dot accent" cx="444" cy="276" r="10"/>
-        <text x="174" y="225" class="map-label">Chengdu</text>
-        <text x="462" y="292" class="map-label">Hong Kong</text>
-        <text x="159" y="254" class="map-sub">SWJTU</text>
-        <text x="462" y="318" class="map-sub">PolyU</text>
-      </svg>
-      <p class="map-caption">The map is intentionally simple: it supports the narrative rather than acting as a full GIS visualization.</p>
+    <div class="journey-map-card" aria-label="Interactive academic route map from Chengdu to Hong Kong">
+      <div id="journey-map-en" class="leaflet-journey-map" data-map-lang="en">
+        <p class="map-fallback">Interactive map: Chengdu, Southwest Jiaotong University to Hong Kong, The Hong Kong Polytechnic University.</p>
+      </div>
+      <div class="journey-map-meta">
+        <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Chengdu / SWJTU</span>
+        <span><i class="fas fa-route" aria-hidden="true"></i> Study route</span>
+        <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Hong Kong / PolyU</span>
+      </div>
+      <p class="map-caption">A real map is used for location context; the timeline below keeps place-based stages separate from research milestones.</p>
     </div>
 
     <div class="timeline">
@@ -139,16 +134,29 @@ redirect_from:
         <p>B.Eng. in Remote Sensing Science and Technology. Built foundations in digital image processing, photogrammetry, remote sensing, 3D laser scanning, computer vision, and engineering surveying.</p>
       </article>
       <article class="timeline-item">
-        <span class="timeline-date">2023 - 2025</span>
-        <h2>Research training and thesis work</h2>
-        <p>Worked on railway machine vision, NeRF-based historic-building reconstruction, remote-sensing ecological review, and high-resolution GPP inversion for Chengdu.</p>
-      </article>
-      <article class="timeline-item">
         <span class="timeline-date">2025 - Present</span>
         <h2>The Hong Kong Polytechnic University, Hong Kong</h2>
         <p>M.Sc. in Urban Informatics and Smart Cities. Current coursework and portfolio work emphasize advanced GIS, urban and geospatial big data analysis, mobile GIS/LBS, remote sensing image processing, and reproducible urban analytics.</p>
       </article>
     </div>
+  </div>
+
+  <div class="research-milestones" aria-label="Research milestones">
+    <article>
+      <span class="milestone-date">2023 - 2024</span>
+      <h2>Railway construction machine vision</h2>
+      <p>Dataset construction and YOLOv8 experiments for advanced support conduit detection in railway-construction scenarios.</p>
+    </article>
+    <article>
+      <span class="milestone-date">2024</span>
+      <h2>NeRF-based heritage reconstruction</h2>
+      <p>UAV and robot-car collection strategy with NeRF-based reconstruction tested around Wenshu Monastery in Chengdu.</p>
+    </article>
+    <article>
+      <span class="milestone-date">2024 - 2025</span>
+      <h2>Remote-sensing ecology and GPP inversion</h2>
+      <p>Review work on remote-sensing ecological indices and undergraduate thesis work on high-resolution GPP mapping for Chengdu.</p>
+    </article>
   </div>
 </section>
 

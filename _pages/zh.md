@@ -112,21 +112,16 @@ author_profile: true
   </div>
 
   <div class="journey-layout">
-    <div class="journey-map-card" aria-label="从成都到香港的学术路径">
-      <svg class="journey-map" viewBox="0 0 640 420" role="img" aria-labelledby="journey-map-title-zh journey-map-desc-zh">
-        <title id="journey-map-title-zh">成都到香港的学术路径</title>
-        <desc id="journey-map-desc-zh">一个轻量地图示意图，连接成都和香港两个学习阶段。</desc>
-        <path class="map-shape" d="M123 225 C150 168 211 119 279 104 C348 88 430 100 493 135 C551 168 576 220 548 270 C520 323 444 354 362 347 C276 340 204 317 154 280 C128 261 115 244 123 225 Z"/>
-        <path class="map-shape inner" d="M253 142 C303 119 378 124 436 151 C493 178 516 220 493 258 C466 304 394 322 325 304 C260 287 222 245 224 201 C225 176 235 154 253 142 Z"/>
-        <path class="route-line" d="M209 238 C270 191 351 183 444 276"/>
-        <circle class="route-dot" cx="209" cy="238" r="10"/>
-        <circle class="route-dot accent" cx="444" cy="276" r="10"/>
-        <text x="174" y="225" class="map-label">Chengdu</text>
-        <text x="462" y="292" class="map-label">Hong Kong</text>
-        <text x="159" y="254" class="map-sub">SWJTU</text>
-        <text x="462" y="318" class="map-sub">PolyU</text>
-      </svg>
-      <p class="map-caption">地图是叙事辅助，不追求复杂 GIS 效果；重点是让访问者快速理解研究路径的形成。</p>
+    <div class="journey-map-card" aria-label="从成都到香港的互动学术路径地图">
+      <div id="journey-map-zh" class="leaflet-journey-map" data-map-lang="zh">
+        <p class="map-fallback">互动地图：成都，西南交通大学；香港，香港理工大学。</p>
+      </div>
+      <div class="journey-map-meta">
+        <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 成都 / 西南交大</span>
+        <span><i class="fas fa-route" aria-hidden="true"></i> 学习路径</span>
+        <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 香港 / 理大</span>
+      </div>
+      <p class="map-caption">这里用真实地图表达地点关系；右侧时间线只保留地点阶段，研究项目节点单独列在下方。</p>
     </div>
 
     <div class="timeline">
@@ -136,16 +131,29 @@ author_profile: true
         <p>遥感科学与技术工学学士。系统学习数字图像处理、摄影测量与遥感、三维激光扫描、计算机视觉和工程测量。</p>
       </article>
       <article class="timeline-item">
-        <span class="timeline-date">2023 - 2025</span>
-        <h2>科研训练与毕业论文</h2>
-        <p>参与铁路机器视觉、基于 NeRF 的历史建筑三维重建、遥感生态评价综述，以及成都市高分辨率 GPP 反演等工作。</p>
-      </article>
-      <article class="timeline-item">
         <span class="timeline-date">2025 - Present</span>
         <h2>香港理工大学，香港</h2>
         <p>Urban Informatics and Smart Cities 硕士。当前课程和作品集聚焦高级 GIS、城市与地理空间大数据、移动 GIS/LBS、遥感图像处理和可复现城市分析。</p>
       </article>
     </div>
+  </div>
+
+  <div class="research-milestones" aria-label="研究节点">
+    <article>
+      <span class="milestone-date">2023 - 2024</span>
+      <h2>铁路施工机器视觉</h2>
+      <p>围绕铁路施工场景中的超前小导管识别，进行数据集构建和 YOLOv8 实验。</p>
+    </article>
+    <article>
+      <span class="milestone-date">2024</span>
+      <h2>基于 NeRF 的历史建筑重建</h2>
+      <p>结合 UAV 与智能小车采集策略，在成都文殊院场景中验证 NeRF 重建流程。</p>
+    </article>
+    <article>
+      <span class="milestone-date">2024 - 2025</span>
+      <h2>遥感生态评价与 GPP 反演</h2>
+      <p>完成遥感生态指数综述相关写作，并开展成都市高分辨率 GPP 制图本科毕业论文工作。</p>
+    </article>
   </div>
 </section>
 
