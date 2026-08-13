@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/assets/fonts/portfolio/newsreader-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/assets/fonts/portfolio/ibm-plex-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --color-paper: oklch(97.5% 0.008 190);
+  --color-paper-2: oklch(94% 0.012 190);
+  --color-paper-3: oklch(90.5% 0.014 195);
+  --color-ink: oklch(19% 0.020 205);
+  --color-ink-2: oklch(33% 0.018 205);
+  --color-neutral: oklch(41% 0.016 205);
+  --color-muted: oklch(48% 0.016 205);
+  --color-rule: oklch(82.5% 0.014 195);
+  --color-rule-2: oklch(74% 0.016 195);
+  --color-accent: oklch(43% 0.110 165);
+  --color-accent-ink: oklch(97.5% 0.008 190);
+  --color-focus: oklch(55% 0.160 165);
+
+  --font-display: "Newsreader", "Songti SC", "STSong", ui-serif, serif;
+  --font-body: "IBM Plex Sans", "PingFang SC", "Microsoft YaHei", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Sans", "PingFang SC", ui-sans-serif, sans-serif;
+
+  --display-weight: 300;
+  --body-weight: 400;
+  --tracking-display: -0.03em;
+  --tracking-label: 0.08em;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-2xl: 2.4414rem;
+  --text-3xl: 3.0518rem;
+  --text-4xl: 3.8147rem;
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-display-desktop: 4rem;
+  --text-display-desktop-zh: clamp(3.5rem, 5vw, 4.15rem);
+  --text-wordmark: clamp(1.85rem, 8vw, 2.8rem);
+  --text-caption: var(--text-xs);
+  --text-small: var(--text-sm);
+  --text-body: var(--text-base);
+  --text-lead: var(--text-md);
+  --text-title: var(--text-2xl);
+  --text-section: var(--text-3xl);
+
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 7rem;
+  --space-4xl: 10rem;
+  --space-1: var(--space-3xs);
+  --space-2: var(--space-2xs);
+  --space-3: var(--space-xs);
+  --space-4: var(--space-sm);
+  --space-5: var(--space-md);
+  --space-6: var(--space-lg);
+  --space-7: 2.5rem;
+  --space-8: var(--space-xl);
+  --space-10: var(--space-2xl);
+  --space-12: var(--space-3xl);
+
+  --rule-hair: 1px;
+  --rule-fine: 2px;
+  --radius-card: 0;
+  --radius-pill: 0;
+  --radius-input: 0;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --duration-fast: var(--dur-micro);
+  --duration-reduced: var(--dur-micro);
+
+  --page-gutter: clamp(1rem, 4vw, 4rem);
+  --content-max: 76rem;
+  --measure: 65ch;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 200;
+  --z-nav: var(--z-sticky);
+  --z-skip: 1000;
+  --color-rule-strong: var(--color-rule-2);
+}

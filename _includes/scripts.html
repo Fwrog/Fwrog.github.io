@@ -21,6 +21,11 @@
       }
     };
 
+    var rootStyles = getComputedStyle(document.documentElement);
+    var routeColor = rootStyles.getPropertyValue("--color-ink-2").trim();
+    var accentColor = rootStyles.getPropertyValue("--color-accent").trim();
+    var paperColor = rootStyles.getPropertyValue("--color-paper").trim();
+
     function initJourneyMap(el) {
       if (el.dataset.initialized === "true") {
         return;
@@ -45,7 +50,7 @@
       ];
 
       L.polyline(route, {
-        color: "#164c73",
+        color: routeColor,
         weight: 3,
         opacity: 0.85,
         dashArray: "8 9"
@@ -53,17 +58,17 @@
 
       L.circleMarker(locations.chengdu.coords, {
         radius: 7,
-        color: "#ffffff",
+        color: paperColor,
         weight: 3,
-        fillColor: "#164c73",
+        fillColor: routeColor,
         fillOpacity: 1
       }).addTo(map).bindPopup(isZh ? locations.chengdu.labelZh : locations.chengdu.labelEn);
 
       L.circleMarker(locations.hongKong.coords, {
         radius: 7,
-        color: "#ffffff",
+        color: paperColor,
         weight: 3,
-        fillColor: "#0f766e",
+        fillColor: accentColor,
         fillOpacity: 1
       }).addTo(map).bindPopup(isZh ? locations.hongKong.labelZh : locations.hongKong.labelEn);
 

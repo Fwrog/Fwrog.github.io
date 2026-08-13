@@ -1,0 +1,18 @@
+<footer class="portfolio-colophon" aria-label="{% if page.lang == 'zh-CN' %}网站署名与联系信息{% else %}Site colophon and contact information{% endif %}">
+  <div class="portfolio-colophon__rule" aria-hidden="true"></div>
+  <div class="portfolio-colophon__grid">
+    <div class="portfolio-colophon__identity">
+      {% if page.lang == "zh-CN" %}
+        <p><strong>Yikai Wu · 吴祎凯</strong>香港理工大学城市信息学与智慧城市硕士生。</p>
+      {% else %}
+        <p><strong>Yikai Wu</strong>M.Sc. student in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University.</p>
+      {% endif %}
+    </div>
+    <nav class="portfolio-colophon__contact" aria-label="{% if page.lang == 'zh-CN' %}联系链接{% else %}Contact links{% endif %}">
+      <a href="mailto:yi-kai.wu@connect.polyu.hk">Email</a>
+      <a href="https://github.com/Fwrog">GitHub</a>
+      <a href="https://orcid.org/0009-0004-2501-7877">ORCID</a>
+    </nav>
+    <p class="portfolio-colophon__meta">{% if page.lang == "zh-CN" %}地理空间 AI · 城市感知 · RGB-D · 可复现遥感{% else %}Geospatial AI · Urban sensing · RGB-D · Reproducible remote sensing{% endif %}<br>© {{ site.time | date: "%Y" }} Yikai Wu</p>
+  </div>
+</footer>

@@ -1,0 +1,62 @@
+{% assign atlas_lang = include.lang | default: "en" %}
+<figure class="research-atlas" aria-labelledby="atlas-title-{{ atlas_lang }} atlas-caption-{{ atlas_lang }}">
+  <svg class="research-atlas__svg" viewBox="0 0 640 520" role="img" aria-labelledby="atlas-title-{{ atlas_lang }} atlas-desc-{{ atlas_lang }}">
+    {% if atlas_lang == "zh" %}
+      <title id="atlas-title-zh">Yikai Wu 的研究图谱</title>
+      <desc id="atlas-desc-zh">三个相互连接的研究方向：城市感知与地理空间 AI、计算机视觉与 RGB-D、遥感与可复现工作流；下方展示从成都西南交通大学到香港理工大学的学习路径。</desc>
+    {% else %}
+      <title id="atlas-title-en">Yikai Wu research atlas</title>
+      <desc id="atlas-desc-en">Three connected research directions: urban sensing and geospatial AI, computer vision and RGB-D, and reproducible remote-sensing workflows; a route below connects Southwest Jiaotong University in Chengdu with PolyU in Hong Kong.</desc>
+    {% endif %}
+
+    <path class="research-atlas__route" d="M145 186 C230 110 405 110 495 186 C438 256 354 304 320 342 C284 304 200 256 145 186Z" />
+    <path class="research-atlas__axis" d="M145 186 L320 342 L495 186" />
+
+    <a class="research-atlas__node research-atlas__node--city" href="#project-gee">
+      <circle cx="145" cy="186" r="68" />
+      {% if atlas_lang == "zh" %}
+        <text x="145" y="177" text-anchor="middle"><tspan x="145">城市感知</tspan><tspan x="145" dy="22">与 GeoAI</tspan></text>
+        <text class="research-atlas__detail" x="145" y="222" text-anchor="middle">City scale</text>
+      {% else %}
+        <text x="145" y="177" text-anchor="middle"><tspan x="145">Urban sensing</tspan><tspan x="145" dy="22">&amp; GeoAI</tspan></text>
+        <text class="research-atlas__detail" x="145" y="222" text-anchor="middle">City scale</text>
+      {% endif %}
+    </a>
+
+    <a class="research-atlas__node research-atlas__node--rgbd" href="#project-rgbd">
+      <circle cx="495" cy="186" r="68" />
+      {% if atlas_lang == "zh" %}
+        <text x="495" y="177" text-anchor="middle"><tspan x="495">计算机视觉</tspan><tspan x="495" dy="22">与 RGB-D</tspan></text>
+        <text class="research-atlas__detail" x="495" y="222" text-anchor="middle">Sensor scale</text>
+      {% else %}
+        <text x="495" y="177" text-anchor="middle"><tspan x="495">Computer vision</tspan><tspan x="495" dy="22">&amp; RGB-D</tspan></text>
+        <text class="research-atlas__detail" x="495" y="222" text-anchor="middle">Sensor scale</text>
+      {% endif %}
+    </a>
+
+    <a class="research-atlas__node research-atlas__node--workflow" href="#project-remote-sensing">
+      <circle cx="320" cy="342" r="74" />
+      {% if atlas_lang == "zh" %}
+        <text x="320" y="333" text-anchor="middle"><tspan x="320">遥感与</tspan><tspan x="320" dy="22">可复现工作流</tspan></text>
+        <text class="research-atlas__detail" x="320" y="378" text-anchor="middle">Evidence scale</text>
+      {% else %}
+        <text x="320" y="333" text-anchor="middle"><tspan x="320">Reproducible</tspan><tspan x="320" dy="22">remote sensing</tspan></text>
+        <text class="research-atlas__detail" x="320" y="378" text-anchor="middle">Evidence scale</text>
+      {% endif %}
+    </a>
+
+    <g class="research-atlas__journey" aria-hidden="true">
+      <circle cx="118" cy="458" r="6" />
+      <path d="M124 458 H510" />
+      <path d="M498 450 L510 458 L498 466" />
+      <circle cx="522" cy="458" r="6" />
+      <text x="118" y="438" text-anchor="start">Chengdu · SWJTU</text>
+      <text x="522" y="438" text-anchor="end">Hong Kong · PolyU</text>
+    </g>
+  </svg>
+  {% if atlas_lang == "zh" %}
+    <figcaption id="atlas-caption-zh">研究方向不是独立标签，而是从城市尺度、传感器尺度到证据工作流的一条连续方法链。</figcaption>
+  {% else %}
+    <figcaption id="atlas-caption-en">The themes form one method chain: city-scale questions, sensor-scale evidence, and workflows that can be reviewed and rerun.</figcaption>
+  {% endif %}
+</figure>

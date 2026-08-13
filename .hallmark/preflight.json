@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-13",
+  "framework": "Jekyll with Minimal Mistakes",
+  "font_stack": "Trebuchet MS theme default",
+  "palette": "hex portfolio variables in assets/css/main.scss",
+  "motion": "motion-cut; no animation library",
+  "spacing": "ad hoc em/rem values",
+  "design_tokens": false,
+  "preserve": [
+    "Jekyll routes and layouts",
+    "Leaflet academic journey map",
+    "existing research claims, links, and project imagery"
+  ]
+}

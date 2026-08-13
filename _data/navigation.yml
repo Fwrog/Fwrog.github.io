@@ -1,5 +1,32 @@
-# Main navigation. English and Chinese pages share one file; the masthead
-# chooses labels and anchors from page.lang.
+# The portfolio masthead selects one language-specific list with page.nav_key.
+main_en:
+  - title: "Research"
+    url: "/#research"
+  - title: "Selected work"
+    url: "/#selected-work"
+  - title: "Publications"
+    url: "/#publications"
+  - title: "Journey"
+    url: "/#journey"
+  - title: "中文"
+    url: "/zh/"
+    class: "language-link"
+
+main_zh:
+  - title: "研究方向"
+    url: "/zh/#research"
+  - title: "代表项目"
+    url: "/zh/#selected-work"
+  - title: "论文"
+    url: "/zh/#publications"
+  - title: "经历"
+    url: "/zh/#journey"
+  - title: "English"
+    url: "/"
+    class: "language-link"
+
+# Legacy navigation remains available to Minimal Mistakes pages outside the
+# bilingual portfolio shell.
 main:
   - title_en: "Projects"
     title_zh: "代表项目"

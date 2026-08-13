@@ -1,26 +1,55 @@
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          {% assign page_lang = page.lang | default: "en" %}
-          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
-            <a href="{% if page_lang == 'zh' %}/zh/#about-me{% else %}/#about-me{% endif %}">{% if page_lang == 'zh' %}主页{% else %}Homepage{% endif %}</a>
-          </li>
-          {% for link in site.data.navigation.main %}
-            {% if page_lang == "zh" %}
-              {% assign nav_title = link.title_zh %}
-              {% assign nav_url = link.url_zh %}
-            {% else %}
-              {% assign nav_title = link.title_en %}
-              {% assign nav_url = link.url_en %}
-            {% endif %}
-            <li class="masthead__menu-item{% if link.class %} {{ link.class }}{% endif %}"><a href="{{ nav_url }}">{{ nav_title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
+{% if page.body_class == "portfolio-page" %}
+  {% assign nav_items = site.data.navigation[page.nav_key] %}
+  <header class="masthead portfolio-masthead">
+    <div class="portfolio-masthead__inner">
+      <div class="portfolio-masthead__issue">
+        <span>GeoAI · Urban sensing · RGB-D</span>
+        <span><a href="mailto:yi-kai.wu@connect.polyu.hk">Email</a> · <a href="https://orcid.org/0009-0004-2501-7877">ORCID</a></span>
+      </div>
+      <a class="portfolio-masthead__name" href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" aria-label="{% if page.lang == 'zh-CN' %}Yikai Wu 主页{% else %}Yikai Wu homepage{% endif %}">
+        <img src="{{ '/images/profile-yikai-wu.png' | relative_url }}" alt="" width="48" height="48">
+        <span class="portfolio-masthead__wordmark">Yikai Wu</span>
+        <small class="portfolio-masthead__subname">{% if page.lang == "zh-CN" %}研究主页{% else %}Research portfolio{% endif %}</small>
+      </a>
+      <div class="portfolio-masthead__nav">
+        <nav id="site-nav" class="greedy-nav" aria-label="{% if page.lang == 'zh-CN' %}主导航{% else %}Primary navigation{% endif %}">
+          <button class="hidden" type="button" aria-label="{% if page.lang == 'zh-CN' %}打开导航菜单{% else %}Open navigation menu{% endif %}" aria-controls="portfolio-hidden-links"><span class="navicon" aria-hidden="true"></span></button>
+          <ul class="visible-links">
+            {% for link in nav_items %}
+              <li class="masthead__menu-item{% if link.class %} {{ link.class }}{% endif %}"><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <ul id="portfolio-hidden-links" class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+      <div class="portfolio-masthead__rule" aria-hidden="true"></div>
+    </div>
+  </header>
+{% else %}
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            {% assign page_lang = page.lang | default: "en" %}
+            <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
+              <a href="{% if page_lang == 'zh' %}/zh/#about-me{% else %}/#about-me{% endif %}">{% if page_lang == 'zh' %}主页{% else %}Homepage{% endif %}</a>
+            </li>
+            {% for link in site.data.navigation.main %}
+              {% if page_lang == "zh" %}
+                {% assign nav_title = link.title_zh %}
+                {% assign nav_url = link.url_zh %}
+              {% else %}
+                {% assign nav_title = link.title_en %}
+                {% assign nav_url = link.url_en %}
+              {% endif %}
+              <li class="masthead__menu-item{% if link.class %} {{ link.class }}{% endif %}"><a href="{{ nav_url }}">{{ nav_title }}</a></li>
+            {% endfor %}
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
     </div>
   </div>
-</div>
+{% endif %}

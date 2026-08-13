@@ -71,6 +71,7 @@ include:
   - files
 exclude:
   - docs
+  - design.md
   - google_scholar_crawler
   - "*.sublime-project"
   - "*.sublime-workspace"

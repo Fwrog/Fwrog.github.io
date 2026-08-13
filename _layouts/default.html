@@ -3,21 +3,22 @@ layout: compress
 ---
 
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js{% if page.body_class %} {{ page.body_class }}-root{% endif %}">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
 
     {% include browser-upgrade.html %}
+    <a class="skip-link" href="#main-content">{% if page.lang == "zh-CN" %}跳到主要内容{% else %}Skip to main content{% endif %}</a>
     {% include masthead.html %}
 
     <div id="main" role="main">
       {% include sidebar.html %}
     
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+      <article id="main-content" class="page" tabindex="-1" itemscope itemtype="http://schema.org/CreativeWork">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
           <section class="page__content" itemprop="text">
@@ -26,6 +27,8 @@ layout: compress
         </div>
       </article>
     </div>
+
+    {% if page.body_class == "portfolio-page" %}{% include site-footer.html %}{% endif %}
 
     {% include scripts.html %}
 
