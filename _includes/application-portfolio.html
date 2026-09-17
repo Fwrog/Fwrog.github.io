@@ -1,0 +1,52 @@
+{% assign t = site.data.portfolio[include.lang] %}
+<div class="academic-layout">
+<aside class="profile-column" id="journey">
+<img class="profile-portrait" src="{{ "/images/personal/yikai-wu.jpg" | relative_url }}" width="2040" height="2968" alt="Yikai Wu / 吴艺楷">
+<h1 id="research-title">Yikai Wu <span>吴艺楷</span></h1>
+<p class="profile-role">{{ t.profile_role }}</p>
+<p>The Hong Kong Polytechnic University</p>
+<p class="profile-links"><a href="mailto:yi-kai.wu@connect.polyu.hk">Email</a> · <a href="https://github.com/Fwrog">GitHub</a> · <a href="https://orcid.org/0009-0004-2501-7877">ORCID</a> · <a href="https://www.researchgate.net/profile/Yikai-Wu-3">ResearchGate</a> · <a href="{{ '/files/Yikai_Wu_CV.pdf' | relative_url }}">CV</a> · <button class="text-button" type="button" id="wechat-open">WeChat</button></p>
+<dialog id="wechat-dialog"><button type="button" class="dialog-close">{{ t.close }} ×</button><img src="{{ "/images/personal/wechat.jpg" | relative_url }}" width="888" height="1131" alt="WeChat QR code"><p>{{ t.wechat_note }}</p></dialog>
+<figure class="journey-map-card"><div id="journey-map-{{ include.lang }}" class="leaflet-journey-map" data-map-lang="{{ include.lang }}" aria-label="{{ t.journey }}"><p class="map-fallback">{{ t.map_fallback }}</p></div><figcaption>{{ t.map_hint }}</figcaption><button type="button" class="map-reset" hidden>{% if include.lang == 'zh' %}完整轨迹{% else %}Full route{% endif %}</button></figure>
+<div class="journey-chapters">{% for place in t.places %}<div class="journey-chapter" id="chapter-{{ place.id }}"><button class="place-select" type="button" data-place="{{ place.id }}" aria-controls="journey-map-{{ include.lang }}"><strong>{{ place.name }}</strong><span>{{ place.period }}</span></button>{% if place.id == "hefei" %}<details class="school-details"><summary>{{ t.schools_label }}</summary><ul>{% for school in t.schools %}<li>{{ school }}</li>{% endfor %}</ul></details>{% endif %}</div>{% endfor %}</div>
+</aside>
+<div class="academic-content">
+<section class="portfolio-section about-section" id="research"><span id="about" class="anchor"></span><h2>{{ t.about_title }}</h2><p>{{ t.about_text }}</p><p>{{ t.about_work }}</p><ul class="interest-list">{% for interest in t.interests %}<li><strong>{{ interest.title }}</strong> — {{ interest.text }}</li>{% endfor %}</ul><p>{{ t.about_personal }}</p></section>
+<section class="portfolio-section news-section" id="news" aria-labelledby="news-title">
+  <header class="section-heading"><h2 id="news-title">{{ t.news_title }}</h2></header>
+  <div class="news-list"><article id="hit-workshop"><p class="news-date">2026 · HIT</p><div><p>{{ t.workshop_text }}</p><details><summary>{{ t.news_photo }}</summary><figure><img src="{{ '/images/journey/hit-workshop-2026.jpg' | relative_url }}" width="1920" height="1280" loading="lazy" alt="{{ t.workshop_caption }}"><figcaption>{{ t.workshop_caption }}</figcaption></figure></details></div></article>
+  <article><p class="news-date">2025/26 · PolyU</p><p>{{ t.news_film }} <a href="#project-film">HKFilmMap →</a></p></article></div>
+</section>
+
+<section class="portfolio-section" id="education"><h2>{{ t.education_title }}</h2><div class="education-row"><span>2025–2027</span><div><strong>The Hong Kong Polytechnic University</strong><p>{{ t.poly }}</p></div></div><div class="education-row"><span>2021–2025</span><div><strong>Southwest Jiaotong University</strong><p>{{ t.swjtu }}</p></div></div></section>
+<section class="portfolio-section publications-section" id="publications" aria-labelledby="publications-title">
+  <header class="section-heading"><h2 id="publications-title">{{ t.publications }}</h2></header>
+  <div class="publication-groups"><div class="status-column"><h3>{{ t.published }} · 02</h3><ol class="publication-list">
+    <li>W. Fan, J. Xiao, <strong>Y. Wu</strong>, et al. “A Review of Optimization Methods for Low-Altitude Aircraft Operations.” <em>Journal of Transportation Engineering and Information</em>, 23(3), 37–59, 2025. <a href="https://doi.org/10.19961/j.cnki.1672-4747.2025.06.044">DOI ↗</a></li>
+    <li><strong>Y. Wu</strong>. “Research Progress of Urban Ecological Evaluation Methods Based on Remote Sensing Indexes.” <em>Highlights in Science, Engineering and Technology</em>, 108, 27–33, 2024. <a href="https://doi.org/10.54097/rm8c6t44">DOI ↗</a></li>
+  </ol></div></div>
+<details class="manuscripts"><summary>{{ t.preparation }} · 3</summary><ul class="publication-list"><li>Target-level Multi-view RGB-D Quantification of Concrete Cracks and Spalling.</li><li>From Photographic Diagnosis to Disease Trajectories: An Integrated Artificial Intelligence Framework for Oral Potentially Malignant Disorders.</li><li>Machine Learning in Alzheimer’s Disease: A Comprehensive Review of Methods, Data Modalities, and Future Directions.</li></ul></details>
+</section>
+
+<section class="portfolio-section application-research" id="selected-work" aria-labelledby="selected-work-title">
+  <header class="section-heading"><h2 id="selected-work-title">{{ t.research_title }}</h2></header>
+  {% for project in t.research %}
+  <article class="research-case" id="project-{{ project.id }}">
+    <div class="research-copy"><p class="project-domain">{{ project.meta }}</p><h3>{{ project.title }}</h3><p class="case-subtitle">{{ project.subtitle }}</p><dl class="project-brief"><div><dt>{{ t.labels[0] }}</dt><dd>{{ project.q }}</dd></div><div><dt>{{ t.labels[1] }}</dt><dd>{{ project.method }}</dd></div><div><dt>{{ t.labels[2] }}</dt><dd>{{ project.result }}</dd></div></dl></div>
+  </article>
+  {% endfor %}
+<div class="research-archive">{% for project in t.other %}<article id="project-{{ project.id }}"><p class="project-domain">{{ project.meta }}</p><h3>{{ project.title }}</h3><dl class="project-brief"><div><dt>{{ t.labels[0] }}</dt><dd>{{ project.q }}</dd></div><div><dt>{{ t.labels[1] }}</dt><dd>{{ project.method }}</dd></div><div><dt>{{ t.labels[2] }}</dt><dd>{{ project.result }}</dd></div></dl></article>{% endfor %}</div>
+</section>
+
+<section class="portfolio-section selected-work" id="builds" aria-labelledby="builds-title">
+  <header class="section-heading"><h2 id="builds-title">{{ t.build_title }}</h2></header>
+  <article class="project-proof" id="project-film">
+    <div class="project-story"><p class="project-domain">{{ t.film_meta }}</p><h3>{{ t.film_title }}</h3><dl class="project-brief"><div><dt>{{ t.labels[0] }}</dt><dd>{{ t.film_q }}</dd></div><div><dt>{{ t.labels[1] }}</dt><dd>{{ t.film_method }}</dd></div><div><dt>{{ t.labels[2] }}</dt><dd>{{ t.film_result }}</dd></div></dl><p class="project-links"><a href="https://github.com/Fwrog/HKFilmMap">{{ t.repo }} ↗</a><a href="https://github.com/Fwrog/HKFilmMap/blob/master/docs/media/demo.mp4">{{ t.demo }} ↗</a><a href="https://github.com/Fwrog/HKFilmMap/blob/master/docs/PROJECT_DESCRIPTION.md">{{ t.documentation }} ↗</a></p></div>
+  </article>
+  <article class="project-proof project-proof--reverse" id="project-gee">
+    <div class="project-story"><p class="project-domain">{{ t.skill_meta }}</p><h3>{{ t.skill_title }}</h3><dl class="project-brief"><div><dt>{{ t.labels[0] }}</dt><dd>{{ t.skill_q }}</dd></div><div><dt>{{ t.labels[1] }}</dt><dd>{{ t.skill_method }}</dd></div><div><dt>{{ t.labels[2] }}</dt><dd>{{ t.skill_result }}</dd></div></dl><p class="project-links"><a href="https://github.com/Fwrog/gee-agent-skill">{{ t.repo }} ↗</a><a href="https://github.com/Fwrog/gee-agent-skill/blob/main/docs/validation/hk_ndvi_product_intercomparison_v03.md">{{ t.report }} ↗</a></p></div>
+  </article>
+</section>
+
+<section class="portfolio-section service-section" id="service"><h2>{{ t.service_title }}</h2><h3>{{ t.service_org }}</h3><p class="service-role">{{ t.service_role }}</p><p>{{ t.service_text }}</p><div class="service-photos"><figure><a href="{{ '/images/personal/surveying-team.jpg' | relative_url }}"><img src="{{ '/images/personal/surveying-team.jpg' | relative_url }}" loading="lazy" width="5568" height="3712" alt="{{ t.team_caption }}"></a><figcaption>{{ t.team_caption }}</figcaption></figure><figure><a href="{{ '/images/personal/surveying-association.jpg' | relative_url }}"><img src="{{ '/images/personal/surveying-association.jpg' | relative_url }}" loading="lazy" width="5568" height="3128" alt="{{ t.group_caption }}"></a><figcaption>{{ t.group_caption }}</figcaption></figure></div></section>
+<section class="portfolio-section" id="awards"><h2>{{ t.awards_title }}</h2><p>{{ t.awards }}</p></section></div></div>

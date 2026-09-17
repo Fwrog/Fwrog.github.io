@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-09-17",
+    "scope": "bilingual portfolio refinement",
+    "theme": "dark spatial hero, light editorial body",
+    "references": [
+      "https://jasper0122.github.io/",
+      "https://rayford295.github.io/about/"
+    ],
+    "skills": [
+      "ccf-humanization",
+      "ccf-visual-composer",
+      "hallmark",
+      "frontend-design"
+    ],
+    "verification": "Jekyll build; 12 viewport/locale combinations; working map selection/reset; native research detail expansion; desktop and mobile visual inspection"
+  },
+  {
+    "date": "2026-09-17",
+    "macrostructure": "Narrative Workflow",
+    "theme": "Existing mineral-paper system retained for continuity",
+    "nav": "N9 Edge-aligned",
+    "footer": "Ft2 Inline",
+    "enrichment": "Geographic journey with place chapters",
+    "brief": "Bilingual doctoral application portfolio: multimodal vision to reliable spatial understanding"
+  },
+  {
     "date": "2026-08-13",
     "scope": "app",
     "macrostructure": "Split Studio",

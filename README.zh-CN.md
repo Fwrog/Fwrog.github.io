@@ -6,7 +6,7 @@
   <a href="https://orcid.org/0009-0004-2501-7877">ORCID</a>
 </p>
 
-<h1 align="center">你好，我是吴祎凯 Yikai Wu 👋</h1>
+<h1 align="center">你好，我是吴艺楷 Yikai Wu 👋</h1>
 
 <p align="center">
   香港理工大学 <strong>Urban Informatics and Smart Cities</strong> 硕士生。<br>

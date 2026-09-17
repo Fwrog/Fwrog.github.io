@@ -1,30 +1,5 @@
 {% if page.body_class == "portfolio-page" %}
-  {% assign nav_items = site.data.navigation[page.nav_key] %}
-  <header class="masthead portfolio-masthead">
-    <div class="portfolio-masthead__inner">
-      <div class="portfolio-masthead__issue">
-        <span>GeoAI · Urban sensing · RGB-D</span>
-        <span><a href="mailto:yi-kai.wu@connect.polyu.hk">Email</a> · <a href="https://orcid.org/0009-0004-2501-7877">ORCID</a></span>
-      </div>
-      <a class="portfolio-masthead__name" href="{% if page.lang == 'zh-CN' %}/zh/{% else %}/{% endif %}" aria-label="{% if page.lang == 'zh-CN' %}Yikai Wu 主页{% else %}Yikai Wu homepage{% endif %}">
-        <img src="{{ '/images/profile-yikai-wu.png' | relative_url }}" alt="" width="48" height="48">
-        <span class="portfolio-masthead__wordmark">Yikai Wu</span>
-        <small class="portfolio-masthead__subname">{% if page.lang == "zh-CN" %}研究主页{% else %}Research portfolio{% endif %}</small>
-      </a>
-      <div class="portfolio-masthead__nav">
-        <nav id="site-nav" class="greedy-nav" aria-label="{% if page.lang == 'zh-CN' %}主导航{% else %}Primary navigation{% endif %}">
-          <button class="hidden" type="button" aria-label="{% if page.lang == 'zh-CN' %}打开导航菜单{% else %}Open navigation menu{% endif %}" aria-controls="portfolio-hidden-links"><span class="navicon" aria-hidden="true"></span></button>
-          <ul class="visible-links">
-            {% for link in nav_items %}
-              <li class="masthead__menu-item{% if link.class %} {{ link.class }}{% endif %}"><a href="{{ link.url }}">{{ link.title }}</a></li>
-            {% endfor %}
-          </ul>
-          <ul id="portfolio-hidden-links" class="hidden-links hidden"></ul>
-        </nav>
-      </div>
-      <div class="portfolio-masthead__rule" aria-hidden="true"></div>
-    </div>
-  </header>
+<header class="application-nav"><nav class="header-links" aria-label="{% if page.lang == 'zh-CN' %}页面导航{% else %}Page sections{% endif %}">{% if page.lang == 'zh-CN' %}<a href="#about">关于</a><a href="#education">教育</a><a href="#publications">论文</a><a href="#selected-work">研究</a><a href="#builds">项目</a><a href="#service">校园</a><a href="#awards">奖项</a>{% else %}<a href="#about">About</a><a href="#education">Education</a><a href="#publications">Publications</a><a href="#selected-work">Research</a><a href="#builds">Projects</a><a href="#service">Service</a><a href="#awards">Awards</a>{% endif %}</nav><a class="language-switch" href="{% if page.lang == 'zh-CN' %}{{ '/' | relative_url }}{% else %}{{ '/zh/' | relative_url }}{% endif %}">{% if page.lang == 'zh-CN' %}English{% else %}中文{% endif %}</a></header>
 {% else %}
   <div class="masthead">
     <div class="masthead__inner-wrap">

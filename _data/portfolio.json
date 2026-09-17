@@ -1,0 +1,500 @@
+{
+  "en": {
+    "role": "Remote sensing · Multimodal vision · Spatial understanding",
+    "headline": "Seeing beyond<br>the image.",
+    "intro": "My interests are in remote sensing, computer vision and multimodal perception. I work on multi-view RGB-D defect measurement and urban street-view analysis, and build geospatial tools.",
+    "question": "Remote sensing & computer vision · The Hong Kong Polytechnic University",
+    "cv": "Download CV",
+    "work": "Explore my work",
+    "contact": "Contact me",
+    "journey": "🧭 Journey",
+    "journey_intro": "Hefei (2003–2021) → Chengdu (2021–2025) → Hong Kong (2025–2027)",
+    "map_hint": "Hefei → Chengdu → Hong Kong",
+    "places": [
+      {
+        "id": "hefei",
+        "name": "Hefei",
+        "period": "2003–2021",
+        "institution": "",
+        "title": "",
+        "text": "Early years and schooling",
+        "link": "",
+        "cta": ""
+      },
+      {
+        "id": "chengdu",
+        "name": "Chengdu",
+        "period": "2021–2025",
+        "institution": "Southwest Jiaotong University",
+        "title": "Learning to measure from images",
+        "text": "B.Eng., Remote Sensing Science and Technology",
+        "link": "#project-gpp",
+        "cta": "Explore the remote-sensing work"
+      },
+      {
+        "id": "hongkong",
+        "name": "Hong Kong",
+        "period": "2025–2027",
+        "institution": "The Hong Kong Polytechnic University",
+        "title": "From detection to spatial understanding",
+        "text": "M.Sc., Urban Informatics and Smart Cities · expected January 2027",
+        "link": "#project-rgbd",
+        "cta": "Explore current research"
+      }
+    ],
+    "map_fallback": "Hefei (2003–2021) → Chengdu (2021–2025) → Hong Kong (2025–2027)",
+    "research_title": "Research Experience",
+    "research_intro": "Connecting visual recognition with spatial information, from individual structures to entire cities.",
+    "labels": [
+      "Why",
+      "How",
+      "Results"
+    ],
+    "research": [
+      {
+        "id": "rgbd",
+        "title": "Multi-view RGB-D defect measurement",
+        "meta": "2025–present · Research Assistant · PolyU",
+        "subtitle": "Multi-view RGB-D perception · Supervisor: Dr. Rongpan Hu",
+        "q": "Detections of the same defect across views do not directly yield consistent physical dimensions. Multiple observations need a shared metric reference.",
+        "method": "Developed a target-level pipeline combining semantic segmentation, marker-based pose estimation, cross-view association and quality-gated fusion in a shared metric reference frame.",
+        "result": "Six crack targets: length MAE 2.17 mm and mean-width MAE 0.22 mm. Two spalling targets: area MARE 2.90% and mean-depth MARE 3.21%. Manuscript in preparation.",
+        "tags": "RGB-D / 3D vision / Infrastructure inspection",
+        "next": "Research question I want to pursue: how should a sensing system choose the next view to reduce measurement uncertainty?",
+        "steps": [
+          "Observe",
+          "Associate",
+          "Fuse",
+          "Measure"
+        ],
+        "metric": "RGB-D",
+        "metric_label": "multiple views · one metric frame"
+      },
+      {
+        "id": "railway",
+        "title": "Tunnel conduit detection and localisation",
+        "meta": "2023–2024 · Student project leader · SWJTU",
+        "subtitle": "Advanced support conduit detection · Advisor: Prof. Min Chen",
+        "q": "Manual inspection provides limited quantitative records of conduit positions and spacing in tunnel advance support.",
+        "method": "Led construction of a dataset with 6,000+ field images and trained YOLO detectors. Integrated stereo-camera calibration and SGBM depth estimation to connect detections with 3D conduit locations; explored pruning and ONNX deployment.",
+        "result": "Preliminary AP@0.5 ≈ 0.80, with an integrated detection and stereo-depth localisation prototype.",
+        "tags": "Detection / Stereo geometry / Engineering prototype",
+        "next": "What this led me to ask: how can visual recognition become reliable geometric measurement?",
+        "steps": [
+          "Field images",
+          "Detection",
+          "Stereo depth",
+          "3D localisation"
+        ],
+        "metric": "6,000+",
+        "metric_label": "field images"
+      },
+      {
+        "id": "urban",
+        "title": "Beauty and distinctiveness in Hong Kong street views",
+        "meta": "2026–present · M.Sc. Research Project · GIFT Lab",
+        "subtitle": "Hong Kong street-view analysis · Advisor: Prof. Xiao Li",
+        "q": "Average aesthetic scores can conceal disagreement. The aim is to identify Hong Kong scenes that combine perceived beauty with visual distinctiveness.",
+        "method": "Implemented a seven-encoder voting ensemble, 5,000-replicate bootstrap analysis and multi-layer kNN distinctiveness scoring, with spatial aggregation and GIS exports.",
+        "result": "Inference across 56,530 Hong Kong panoramas (226,120 directional views), yielding 435 view-level candidates for subsequent spatial analysis.",
+        "tags": "Computer vision / Urban perception / GIS",
+        "next": "Research question I want to pursue: how can spatial context and disagreement improve interpretation of visual predictions?",
+        "steps": [
+          "Street views",
+          "Ensemble",
+          "Distinctiveness",
+          "Spatial analysis"
+        ],
+        "metric": "56,530",
+        "metric_label": "Hong Kong panoramas"
+      }
+    ],
+    "earlier": "Other work",
+    "earlier_intro": "Earlier projects explain how my methods developed. Adjacent medical-image work adds experience in evaluation across datasets.",
+    "other": [
+      {
+        "id": "nerf",
+        "title": "Reconstructing historic buildings with NeRF",
+        "meta": "2024 · Student Research Training Program · Prof. Guoxiang Liu",
+        "text": "Explored NeRF reconstruction using UAV and ground imagery of Wenshu Monastery.",
+        "q": "Explore how multi-view photographs can support heritage digitisation.",
+        "method": "Applied NeRF to UAV and ground imagery collected at Wenshu Monastery in Chengdu.",
+        "result": "Explored multi-view reconstruction of the historic site."
+      },
+      {
+        "id": "gpp",
+        "title": "Fine-resolution GPP estimation for Chengdu",
+        "meta": "2024–2025 · Undergraduate thesis · Prof. Xiaodan Wu",
+        "text": "Estimated GPP in Chengdu using HLS, FLUXNET and vegetation-specific SVM models.",
+        "q": "Estimate gross primary productivity at finer spatial resolution for local ecological analysis.",
+        "method": "Integrated HLS v2.0 and FLUXNET in GEE, Python and MATLAB, using vegetation-specific SVM models.",
+        "result": "Generated a fine-resolution GPP map for Chengdu as a basis for subsequent satellite-product comparisons."
+      },
+      {
+        "id": "medical",
+        "title": "Medical-image analysis across datasets",
+        "meta": "2024–present · Computational implementation lead",
+        "text": "Worked on oral-image model evaluation and an assessment and follow-up research platform.",
+        "q": "Address variation across oral-image datasets and connect image assessment with longitudinal follow-up.",
+        "method": "Led computational implementation for model evaluation and a research platform integrating assessment and follow-up.",
+        "result": "Test Macro-F1: 0.921 internally (n=665), 0.885 on OMD (n=173), and 0.937 on OralTriD (n=80). Manuscript in preparation."
+      }
+    ],
+    "build_title": "Projects",
+    "build_intro": "Two public projects show how I turn spatial methods into usable applications and research workflows.",
+    "film_title": "🎬 HKFilmMap",
+    "film_meta": "PolyU LSGI541 · 2025/26 Semester 2 · Coursework",
+    "film_q": "How can a static list of film locations become a city route people can explore?",
+    "film_method": "Organised film and scene data with Python, built a Room/SQLite database, and implemented map browsing, scene check-ins and half-day route planning in Android.",
+    "film_result": "68 films · 97 places · 142 scene records (85 with usable coordinates).",
+    "film_caption": "HKFilmMap · project concept",
+    "skill_title": "gee-agent-skill",
+    "skill_meta": "Public example · gee-agent-skill",
+    "skill_q": "How can an AI-assisted geospatial workflow remain reviewable and reproducible?",
+    "skill_method": "Connected source-grounded analysis planning, GEE script generation, validation, execution checks and run records in a reusable workflow.",
+    "skill_result": "Includes NDVI examples, a Python CLI and an HLS/MODIS product-consistency report.",
+    "skill_caption": "Plan → evidence → validation → controlled execution → trace.",
+    "repo": "Source code",
+    "demo": "Watch demo",
+    "report": "Validation report",
+    "documentation": "Project details",
+    "workshop_title": "An exchange beyond my home campus",
+    "workshop_text": "Joined a seven-day workshop on historic urban space computing and modelling at HIT, Harbin.",
+    "workshop_caption": "HIT computational city science workshop, 2026. Group photograph supplied from the event.",
+    "publications": "Publications",
+    "published": "Published",
+    "preparation": "In preparation",
+    "status_note": "Ongoing manuscripts are listed separately from published articles. Authorship on ongoing work remains subject to confirmation.",
+    "education": "Education & practical experience",
+    "poly": "M.Sc., Urban Informatics and Smart Cities · Sep 2025–Jan 2027 (expected) · GPA 3.89/4.30",
+    "swjtu": "B.Eng., Remote Sensing Science and Technology · Sep 2021–Jun 2025 · Average 84.44/100",
+    "practice": "Engineering survey training: total station, RTK, CP III processing and C# coordinate/database tools. Data-collection internship on Zhengzhou Metro Line 8.",
+    "awards": "🥉 “都是粗心热的错” · Third Prize, Primary School Mathematics Diary Competition · Shushan District · 2013",
+    "methods": "Working methods",
+    "methods_text": "Remote sensing & GIS: GEE, HLS, FLUXNET, spatial processing. Vision: OpenCV, RGB-D calibration, YOLO, NeRF. Research software: Python, MATLAB, C/C++, C#, Java/Android, Git, LaTeX and Markdown.",
+    "additional_tools": "I also enjoy building small tools for everyday research: camera calibration, cartography and project planning.",
+    "closing": "Let’s talk vision & space.",
+    "closing_text": "I’m looking to pursue doctoral research in multimodal learning, reliable spatial perception and active observation. I’d be happy to discuss research and collaboration.",
+    "footer": "Yikai Wu · Hong Kong · Remote sensing & computer vision",
+    "future_label": "Questions I want to explore next",
+    "future_title": "Richer observations.<br>More capable perception.",
+    "future_intro": "A progression from my current engineering experience toward method questions in multimodal learning, reliable perception and embodied intelligence.",
+    "training": "Training",
+    "training_text": "RGB + real depth → identify and transfer useful geometric knowledge",
+    "deployment": "Deployment",
+    "deployment_text": "RGB only → lightweight segmentation",
+    "future": [
+      {
+        "when": "Near term",
+        "title": "Useful cross-modal knowledge transfer",
+        "text": "Where does depth improve segmentation, and how can an RGB model retain that useful information? I plan to study depth-assisted training with RGB-only deployment."
+      },
+      {
+        "when": "During the PhD",
+        "title": "Reliable perception across scenes",
+        "text": "Which representations remain useful when scenes, scales or sensor conditions change? Cross-scene transfer or data-efficient fine-structure learning would be a focused next step."
+      },
+      {
+        "when": "Longer term",
+        "title": "Active observation & autonomous understanding",
+        "text": "Where should a system look next, from which viewpoint, and when has it observed enough? This is my intended connection to autonomous mapping and embodied intelligence."
+      }
+    ],
+    "news_title": "News",
+    "news_photo": "Workshop photograph",
+    "news_film": "Completed a film-location mapping project for coursework.",
+    "nav_journey": "🧭 Journey",
+    "nav_research": "Research",
+    "nav_future": "Research directions",
+    "nav_build": "🛠️ Projects & tools",
+    "nav_publications": "Publications",
+    "nav_news": "🌱 News",
+    "bio": "Hi, I’m Yikai 👋",
+    "bio_text": "M.Sc. student in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University. Previously, I studied Remote Sensing Science and Technology at Southwest Jiaotong University.",
+    "detail": "Methods & results",
+    "profile_role": "M.Sc. student · Hong Kong",
+    "about_title": "About Me",
+    "education_title": "Education",
+    "awards_title": "Awards",
+    "about_text": "Hi, I’m Yikai Wu, an M.Sc. student in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University, expecting to graduate in January 2027. I received my B.Eng. in Remote Sensing Science and Technology from Southwest Jiaotong University. I grew up in Hefei and have studied in Chengdu and Hong Kong.",
+    "about_work": "My current work includes multi-view RGB-D measurement of infrastructure defects and Hong Kong street-view analysis. Earlier projects involved tunnel conduit detection, heritage reconstruction and vegetation productivity estimation. My interests include:",
+    "interests": [
+      {
+        "title": "3D vision & multimodal perception",
+        "text": "combining images, depth and geometry for recognition and measurement."
+      },
+      {
+        "title": "Remote sensing & geospatial analysis",
+        "text": "extracting environmental and urban information from satellite and street-view imagery."
+      },
+      {
+        "title": "Active perception",
+        "text": "understanding how viewpoint selection can support spatial understanding."
+      }
+    ],
+    "about_personal": "I also enjoy building mapping applications and small research tools. Feel free to get in touch by email 👋",
+    "service_title": "Service & campus life",
+    "service_org": "Surveying Association, Southwest Jiaotong University",
+    "service_role": "2021–2023 · Publicity team member, 19th committee → Head of Publicity, 20th committee",
+    "service_text": "Beyond surveying: time with the publicity team and friends from the association. 📷",
+    "team_caption": "With the publicity team",
+    "group_caption": "The association, together",
+    "schools_label": "School years in Hefei",
+    "schools": [
+      "Xiyuan Xincun Primary School, South Campus",
+      "Hefei No. 50 Middle School, Swan Lake Campus",
+      "Heng’an School, Gangji, Changfeng"
+    ],
+    "wechat_note": "Scan to connect on WeChat. Please include your name and a short introduction.",
+    "close": "Close"
+  },
+  "zh": {
+    "role": "遥感 · 多模态视觉 · 空间理解",
+    "headline": "从视觉感知，<br>到空间理解。",
+    "intro": "主要关注遥感、计算机视觉与多模态感知。目前在做多视角 RGB-D 缺陷量测和城市街景分析，也写一些地理空间工具。",
+    "question": "遥感与计算机视觉研究 · 香港理工大学",
+    "cv": "下载英文 CV",
+    "work": "查看研究与项目",
+    "contact": "联系我",
+    "journey": "🧭 经历",
+    "journey_intro": "合肥（2003–2021）→ 成都（2021–2025）→ 香港（2025–2027）",
+    "map_hint": "合肥 → 成都 → 香港",
+    "places": [
+      {
+        "id": "hefei",
+        "name": "合肥",
+        "period": "2003–2021",
+        "institution": "",
+        "title": "",
+        "text": "成长与求学",
+        "link": "",
+        "cta": ""
+      },
+      {
+        "id": "chengdu",
+        "name": "成都",
+        "period": "2021–2025",
+        "institution": "西南交通大学",
+        "title": "学习从图像中获取空间信息",
+        "text": "遥感科学与技术 · 工学学士",
+        "link": "#project-gpp",
+        "cta": "查看遥感研究"
+      },
+      {
+        "id": "hongkong",
+        "name": "香港",
+        "period": "2025–2027",
+        "institution": "香港理工大学",
+        "title": "从检测走向空间理解",
+        "text": "城市信息学与智慧城市 · 硕士在读，预计 2027 年 1 月毕业",
+        "link": "#project-rgbd",
+        "cta": "查看当前研究"
+      }
+    ],
+    "map_fallback": "合肥（2003–2021）→ 成都（2021–2025）→ 香港（2025–2027）",
+    "research_title": "研究经历",
+    "research_intro": "从近景量测到城市尺度，连接视觉识别与空间信息。",
+    "labels": [
+      "为什么",
+      "怎么做",
+      "结果"
+    ],
+    "research": [
+      {
+        "id": "rgbd",
+        "title": "多视角 RGB-D 缺陷量测",
+        "meta": "2025—至今 · 研究助理 · 香港理工大学",
+        "subtitle": "多视角 RGB-D 感知 · 导师：Dr. Rongpan Hu",
+        "q": "同一缺陷在不同视角下的检测并不直接对应一致的物理尺寸，需要将多次观测放进统一度量参考系。",
+        "method": "开发目标级 RGB-D 流程，将语义分割、标记物位姿估计、跨视角目标关联和质量门控融合连接到统一的度量参考系。",
+        "result": "6 个裂缝目标：长度 MAE 2.17 mm，平均宽度 MAE 0.22 mm；2 个剥落目标：面积 MARE 2.90%，平均深度 MARE 3.21%。论文准备中。",
+        "tags": "RGB-D / 三维视觉 / 基础设施检测",
+        "next": "希望进一步研究：感知系统如何选择下一观测视角，以降低量测不确定性？",
+        "steps": [
+          "观测",
+          "目标关联",
+          "多视角融合",
+          "物理量测"
+        ],
+        "metric": "RGB-D",
+        "metric_label": "多视角 · 几何 · 量测"
+      },
+      {
+        "id": "railway",
+        "title": "隧道小导管检测与定位",
+        "meta": "2023—2024 · 大学生科研训练项目负责人 · 西南交通大学",
+        "subtitle": "超前小导管识别 · 导师：Prof. Min Chen",
+        "q": "人工检查难以持续记录隧道超前支护小导管的位置与间距，希望将现场图像转化为可量化的检查信息。",
+        "method": "带领构建 6,000 余幅现场图像数据集并训练 YOLO 检测器，结合双目标定与 SGBM 深度估计，将图像检测连接到三维位置；探索模型剪枝和 ONNX 部署。",
+        "result": "初步 AP@0.5 ≈ 0.80，完成目标检测与双目深度定位的原型集成。",
+        "tags": "目标检测 / 双目几何 / 工程原型",
+        "next": "由此形成的问题：视觉识别如何进一步转化为可靠的几何量测？",
+        "steps": [
+          "现场图像",
+          "目标检测",
+          "双目深度",
+          "三维定位"
+        ],
+        "metric": "6,000+",
+        "metric_label": "现场图像"
+      },
+      {
+        "id": "urban",
+        "title": "香港街景美感与独特性",
+        "meta": "2026—至今 · 硕士研究项目 · GIFT Lab",
+        "subtitle": "香港街景分析 · 导师：Prof. Xiao Li",
+        "q": "平均审美分数可能掩盖评价分歧，希望识别兼具美感与视觉独特性的香港街景。",
+        "method": "实现七编码器投票集成、5,000 次 bootstrap 分析与多层 kNN 独特性评分，并连接空间聚合和 GIS 导出。",
+        "result": "完成 56,530 幅香港全景图（226,120 个方向视图）的推理，筛选出 435 个视图级候选，进入后续空间分析。",
+        "tags": "计算机视觉 / 城市感知 / GIS",
+        "next": "希望进一步研究：空间语境与评价分歧，如何帮助解释视觉模型的预测？",
+        "steps": [
+          "街景观测",
+          "模型集成",
+          "独特性分析",
+          "空间解释"
+        ],
+        "metric": "56,530",
+        "metric_label": "香港街景全景图"
+      }
+    ],
+    "earlier": "其他工作",
+    "earlier_intro": "早期项目说明我的方法如何积累；医学图像工作则补充了跨数据集评估的经验。",
+    "other": [
+      {
+        "id": "nerf",
+        "title": "用 NeRF 重建历史建筑",
+        "meta": "2024 · 大学生科研训练项目 · 导师：Prof. Guoxiang Liu",
+        "text": "使用文殊院的无人机与地面影像，探索历史建筑的 NeRF 重建。",
+        "q": "探索如何利用多视角照片记录历史建筑。",
+        "method": "使用成都文殊院采集的无人机与地面影像，开展 NeRF 重建。",
+        "result": "完成历史建筑多视角重建探索。"
+      },
+      {
+        "id": "gpp",
+        "title": "成都地区精细尺度 GPP 估算",
+        "meta": "2024—2025 · 本科毕业论文 · 导师：Prof. Xiaodan Wu",
+        "text": "基于 HLS 与 FLUXNET 数据，使用植被类型对应的 SVM 模型估算成都地区 GPP。",
+        "q": "为局地生态分析估算更精细尺度的植被总初级生产力。",
+        "method": "整合 HLS v2.0 与 FLUXNET，在 GEE、Python 和 MATLAB 中建立植被类型对应的 SVM 模型。",
+        "result": "生成成都地区的精细尺度 GPP 地图，为后续产品比较提供基础。"
+      },
+      {
+        "id": "medical",
+        "title": "跨数据集的医学图像分析",
+        "meta": "2024—至今 · 计算实现负责人",
+        "text": "参与口腔图像模型评估与随访研究平台的计算实现。",
+        "q": "应对口腔图像数据集间的差异，并连接图像评估与随访信息。",
+        "method": "负责模型评估及研究平台的计算实现，整合口腔图像评估和随访流程。",
+        "result": "测试 Macro-F1：内部数据集 0.921（n=665）、OMD 0.885（n=173）、OralTriD 0.937（n=80）。论文准备中。"
+      }
+    ],
+    "build_title": "项目",
+    "build_intro": "两个公开项目，展示空间方法如何落到城市应用和可复现的研究工作流。",
+    "film_title": "🎬 HKFilmMap",
+    "film_meta": "香港理工大学 LSGI541 · 2025/26 第二学期 · 课程项目",
+    "film_q": "如何把静态的电影取景地清单，变成可以实际探索的城市路线？",
+    "film_method": "用 Python 整理电影与场景数据，构建 Room/SQLite 数据库，在 Android 中实现地图浏览、场景打卡和半日路线规划。",
+    "film_result": "68 部电影 · 97 个地点 · 142 条场景记录（85 条含可用坐标）。",
+    "film_caption": "HKFilmMap · 项目概念图",
+    "skill_title": "gee-agent-skill",
+    "skill_meta": "公开实例 · gee-agent-skill",
+    "skill_q": "如何让 AI 辅助的地理空间分析仍然可审阅、可追溯和可复现？",
+    "skill_method": "把有来源依据的分析计划、GEE 脚本生成、验证、执行检查和运行记录串联为可复用工作流。",
+    "skill_result": "包含 NDVI 示例、Python 命令行工具，以及 HLS/MODIS 产品一致性对比报告。",
+    "skill_caption": "计划 → 证据 → 验证 → 受控执行 → 运行记录。",
+    "repo": "查看代码",
+    "demo": "观看演示",
+    "report": "验证报告",
+    "documentation": "项目说明",
+    "workshop_title": "走出本校的一段学术交流",
+    "workshop_text": "参加了哈尔滨工业大学为期七天的“城市历史空间计算与建模研习营”。",
+    "workshop_caption": "2026 年哈工大计算城市科学研习营活动合影。照片来自本次活动。",
+    "publications": "论文",
+    "published": "已发表",
+    "preparation": "准备中",
+    "status_note": "在研稿件与已发表论文分别列出；进行中工作的作者安排仍以最终确认为准。",
+    "education": "教育与实践经历",
+    "poly": "城市信息学与智慧城市硕士 · 2025.09—2027.01（预计）· GPA 3.89/4.30",
+    "swjtu": "遥感科学与技术工学学士 · 2021.09—2025.06 · 平均分 84.44/100",
+    "practice": "工程测量实习：全站仪、RTK、CP III 处理及 C# 坐标／数据库工具。郑州地铁 8 号线项目数据采集实习。",
+    "awards": "🥉 《都是粗心热的错》 · 蜀山区小学生数学日记比赛三等奖 · 蜀山区 · 2013",
+    "methods": "常用方法与工具",
+    "methods_text": "遥感与 GIS：GEE、HLS、FLUXNET、空间处理。视觉：OpenCV、RGB-D 标定、YOLO、NeRF。研究软件：Python、MATLAB、C/C++、C#、Java/Android、Git、LaTeX 和 Markdown。",
+    "additional_tools": "也喜欢将日常研究需求做成小工具：相机标定、地图制图和研究进度管理。",
+    "closing": "一起聊聊视觉与空间。",
+    "closing_text": "期待在博士阶段继续探索多模态学习、可靠空间感知与主动观测。欢迎就相关研究与合作交流。",
+    "footer": "吴艺楷 Yikai Wu · 香港 · 遥感与计算机视觉",
+    "future_label": "下一步的研究问题",
+    "future_title": "让丰富的观测，成为更有效的感知。",
+    "future_intro": "从已有工程实践中提炼方法问题，逐步连接跨模态学习、跨场景感知与具身智能。",
+    "training": "训练阶段",
+    "training_text": "RGB＋真实深度 → 识别并迁移有效几何知识",
+    "deployment": "部署阶段",
+    "deployment_text": "仅 RGB → 轻量化分割",
+    "future": [
+      {
+        "when": "近期",
+        "title": "有效的跨模态知识迁移",
+        "text": "深度在哪些区域真正改善分割？RGB 模型如何保留这些有用信息？以真实深度辅助训练、仅依赖 RGB 部署作为下一步研究切入点。"
+      },
+      {
+        "when": "博士阶段",
+        "title": "跨场景的可靠空间感知",
+        "text": "当场景、尺度或传感器条件变化时，哪些表示仍然有效？结合实际资源，选择跨场景迁移或数据高效的精细结构学习深入研究。"
+      },
+      {
+        "when": "更长期",
+        "title": "主动观测与自主空间理解",
+        "text": "系统应该继续观察哪里、采用什么视角，以及何时已经获得足够信息？让感知结果影响下一次观测，逐步连接自主建图与具身智能。"
+      }
+    ],
+    "news_title": "近况",
+    "news_photo": "展开活动合影",
+    "news_film": "完成电影取景地地图课程项目。",
+    "nav_journey": "🧭 经历地图",
+    "nav_research": "研究工作",
+    "nav_future": "未来方向",
+    "nav_build": "🛠️ 项目与工具",
+    "nav_publications": "论文",
+    "nav_news": "🌱 近况",
+    "bio": "你好，我是吴艺楷 👋",
+    "bio_text": "香港理工大学城市信息学与智慧城市硕士生，本科就读于西南交通大学遥感科学与技术专业。",
+    "detail": "方法与结果",
+    "profile_role": "硕士在读 · 香港",
+    "about_title": "关于我",
+    "education_title": "教育经历",
+    "awards_title": "奖项",
+    "about_text": "你好，我是吴艺楷，目前在香港理工大学攻读城市信息学与智慧城市硕士，预计 2027 年 1 月毕业。本科就读于西南交通大学遥感科学与技术专业。我在合肥长大，先后在成都和香港求学。",
+    "about_work": "目前，我参与多视角 RGB-D 基础设施缺陷量测和香港街景分析。此前做过隧道小导管检测、历史建筑重建及植被生产力估算，研究兴趣主要包括：",
+    "interests": [
+      {
+        "title": "三维视觉与多模态感知",
+        "text": "结合图像、深度和几何信息进行识别与量测。"
+      },
+      {
+        "title": "遥感与地理空间分析",
+        "text": "从卫星影像和街景中提取环境与城市空间信息。"
+      },
+      {
+        "title": "主动感知",
+        "text": "关注观测视角的选择及其对空间理解的影响。"
+      }
+    ],
+    "about_personal": "研究之外，也喜欢做一些地图应用和研究工具。欢迎通过邮件交流 👋",
+    "service_title": "校园与社团",
+    "service_org": "西南交通大学测量协会",
+    "service_role": "2021–2023 · 第十九届宣传部部员 → 第二十届宣传部部长",
+    "service_text": "测量之外，也有宣传部的日常和一起活动的朋友们。📷",
+    "team_caption": "宣传部的朋友们",
+    "group_caption": "测量协会合影",
+    "schools_label": "在合肥的求学时光",
+    "schools": [
+      "西园新村小学南区",
+      "合肥市第五十中学天鹅湖校区",
+      "长丰岗集衡安学校"
+    ],
+    "wechat_note": "扫码添加微信，欢迎备注姓名与来意。",
+    "close": "关闭"
+  }
+}

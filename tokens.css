@@ -105,3 +105,10 @@
   --z-skip: 1000;
   --color-rule-strong: var(--color-rule-2);
 }
+
+/* Warm academic palette */
+.portfolio-page {
+ --color-ink:#302925; --color-ink-2:#4d433c; --color-muted:#73665b;
+ --color-accent:#733d32; --color-paper:#fffdf9; --color-paper-2:#f2eae1;
+ --color-rule:#e7ddd1; --surface-soft:#f7f1e9; --color-focus:#a8693c;
+}

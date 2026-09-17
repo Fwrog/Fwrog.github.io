@@ -1,14 +1,13 @@
 {
-  "date": "2026-08-13",
-  "framework": "Jekyll with Minimal Mistakes",
-  "font_stack": "Trebuchet MS theme default",
-  "palette": "hex portfolio variables in assets/css/main.scss",
-  "motion": "motion-cut; no animation library",
-  "spacing": "ad hoc em/rem values",
-  "design_tokens": false,
+  "date": "2026-09-17",
+  "framework": "Jekyll 3.9 / Minimal Mistakes",
+  "font_stack": "Self-hosted Newsreader and IBM Plex Sans; system Chinese fonts",
+  "design_tokens": "Existing tokens.css retained",
+  "motion": "Static hero; immediate map selection; reduced motion supported",
   "preserve": [
-    "Jekyll routes and layouts",
-    "Leaflet academic journey map",
-    "existing research claims, links, and project imagery"
-  ]
+    "English and Chinese routes",
+    "Original CV source copy",
+    "Existing non-homepage layouts"
+  ],
+  "content_basis": "User CV, user updates and verified public repository descriptions"
 }
