@@ -55,7 +55,7 @@
         "id": "rgbd",
         "title": "Multi-view RGB-D defect measurement",
         "meta": "2025–present · Research Assistant · PolyU",
-        "subtitle": "Multi-view RGB-D perception · Supervisor: Dr. Rongpan Hu",
+        "subtitle": "Multi-view RGB-D perception · Supervisor: <a href=\"https://www.polyu.edu.hk/cee/people/academic-staff/dr-rongpan-hu/?sc_lang=en\">Dr. Rongpan Hu</a>",
         "q": "Detections of the same defect across views do not directly yield consistent physical dimensions. Multiple observations need a shared metric reference.",
         "method": "Developed a target-level pipeline combining semantic segmentation, marker-based pose estimation, cross-view association and quality-gated fusion in a shared metric reference frame.",
         "result": "Six crack targets: length MAE 2.17 mm and mean-width MAE 0.22 mm. Two spalling targets: area MARE 2.90% and mean-depth MARE 3.21%. Manuscript in preparation.",
@@ -74,7 +74,7 @@
         "id": "railway",
         "title": "Tunnel conduit detection and localisation",
         "meta": "2023–2024 · Student project leader · SWJTU",
-        "subtitle": "Advanced support conduit detection · Advisor: Prof. Min Chen",
+        "subtitle": "Advanced support conduit detection · Advisor: <a href=\"https://faculty.swjtu.edu.cn/chenmin/zh_CN/index.htm\">Prof. Min Chen</a>",
         "q": "Manual inspection provides limited quantitative records of conduit positions and spacing in tunnel advance support.",
         "method": "Led construction of a dataset with 6,000+ field images and trained YOLO detectors. Integrated stereo-camera calibration and SGBM depth estimation to connect detections with 3D conduit locations; explored pruning and ONNX deployment.",
         "result": "Preliminary AP@0.5 ≈ 0.80, with an integrated detection and stereo-depth localisation prototype.",
@@ -92,8 +92,8 @@
       {
         "id": "urban",
         "title": "Beauty and distinctiveness in Hong Kong street views",
-        "meta": "2026–present · M.Sc. Research Project · GIFT Lab",
-        "subtitle": "Hong Kong street-view analysis · Advisor: Prof. Xiao Li",
+        "meta": "2026–present · M.Sc. Research Project · <a href=\"https://www.geo-gift-lab.com/\">GIFT Lab</a>",
+        "subtitle": "Hong Kong street-view analysis · Advisor: <a href=\"https://www.geo-gift-lab.com/people\">Prof. Xiao Li</a>",
         "q": "Average aesthetic scores can conceal disagreement. The aim is to identify Hong Kong scenes that combine perceived beauty with visual distinctiveness.",
         "method": "Implemented a seven-encoder voting ensemble, 5,000-replicate bootstrap analysis and multi-layer kNN distinctiveness scoring, with spatial aggregation and GIS exports.",
         "result": "Inference across 56,530 Hong Kong panoramas (226,120 directional views), yielding 435 view-level candidates for subsequent spatial analysis.",
@@ -115,7 +115,7 @@
       {
         "id": "nerf",
         "title": "Reconstructing historic buildings with NeRF",
-        "meta": "2024 · Student Research Training Program · Prof. Guoxiang Liu",
+        "meta": "2024 · Student Research Training Program · <a href=\"https://faculty.swjtu.edu.cn/liuguoxiang\">Prof. Guoxiang Liu</a>",
         "text": "Explored NeRF reconstruction using UAV and ground imagery of Wenshu Monastery.",
         "q": "Explore how multi-view photographs can support heritage digitisation.",
         "method": "Applied NeRF to UAV and ground imagery collected at Wenshu Monastery in Chengdu.",
@@ -124,7 +124,7 @@
       {
         "id": "gpp",
         "title": "Fine-resolution GPP estimation for Chengdu",
-        "meta": "2024–2025 · Undergraduate thesis · Prof. Xiaodan Wu",
+        "meta": "2024–2025 · Undergraduate thesis · <a href=\"https://faculty.swjtu.edu.cn/wuxiaodan/zh_CN/index/837397/list/index.htm\">Prof. Xiaodan Wu</a>",
         "text": "Estimated GPP in Chengdu using HLS, FLUXNET and vegetation-specific SVM models.",
         "q": "Estimate gross primary productivity at finer spatial resolution for local ecological analysis.",
         "method": "Integrated HLS v2.0 and FLUXNET in GEE, Python and MATLAB, using vegetation-specific SVM models.",
@@ -143,11 +143,11 @@
     "build_title": "Projects",
     "build_intro": "Two public projects show how I turn spatial methods into usable applications and research workflows.",
     "film_title": "🎬 HKFilmMap",
-    "film_meta": "PolyU LSGI541 · 2025/26 Semester 2 · Coursework",
+    "film_meta": "PolyU LSGI541 · Android coursework · Web update",
     "film_q": "How can a static list of film locations become a city route people can explore?",
-    "film_method": "Organised film and scene data with Python, built a Room/SQLite database, and implemented map browsing, scene check-ins and half-day route planning in Android.",
+    "film_method": "Built the Android map, Room/SQLite catalogue and half-day route planner; extended the project with a bilingual Web atlas, editable itineraries and personal place notes.",
     "film_result": "68 films · 97 places · 142 scene records (85 with usable coordinates).",
-    "film_caption": "HKFilmMap · project concept",
+    "film_caption": "HKFilmMap · Web atlas",
     "skill_title": "gee-agent-skill",
     "skill_meta": "Public example · gee-agent-skill",
     "skill_q": "How can an AI-assisted geospatial workflow remain reviewable and reproducible?",
@@ -216,7 +216,7 @@
     "about_title": "About Me",
     "education_title": "Education",
     "awards_title": "Awards",
-    "about_text": "Hi, I’m Yikai Wu, an M.Sc. student in Urban Informatics and Smart Cities at The Hong Kong Polytechnic University, expecting to graduate in January 2027. I received my B.Eng. in Remote Sensing Science and Technology from Southwest Jiaotong University. I grew up in Hefei and have studied in Chengdu and Hong Kong.",
+    "about_text": "Hi, I’m Yikai Wu, an M.Sc. student in Urban Informatics and Smart Cities at <a href=\"https://www.polyu.edu.hk/\">The Hong Kong Polytechnic University</a>, expecting to graduate in January 2027. I received my B.Eng. in Remote Sensing Science and Technology from <a href=\"https://www.swjtu.edu.cn/\">Southwest Jiaotong University</a>. I grew up in Hefei and have studied in Chengdu and Hong Kong.",
     "about_work": "My current work includes multi-view RGB-D measurement of infrastructure defects and Hong Kong street-view analysis. Earlier projects involved tunnel conduit detection, heritage reconstruction and vegetation productivity estimation. My interests include:",
     "interests": [
       {
@@ -246,7 +246,9 @@
       "Heng’an School, Gangji, Changfeng"
     ],
     "wechat_note": "Scan to connect on WeChat. Please include your name and a short introduction.",
-    "close": "Close"
+    "close": "Close",
+    "film_web": "Open Web atlas",
+    "film_report": "Course report"
   },
   "zh": {
     "role": "遥感 · 多模态视觉 · 空间理解",
@@ -304,7 +306,7 @@
         "id": "rgbd",
         "title": "多视角 RGB-D 缺陷量测",
         "meta": "2025—至今 · 研究助理 · 香港理工大学",
-        "subtitle": "多视角 RGB-D 感知 · 导师：Dr. Rongpan Hu",
+        "subtitle": "多视角 RGB-D 感知 · 导师：<a href=\"https://www.polyu.edu.hk/cee/people/academic-staff/dr-rongpan-hu/?sc_lang=en\">Dr. Rongpan Hu</a>",
         "q": "同一缺陷在不同视角下的检测并不直接对应一致的物理尺寸，需要将多次观测放进统一度量参考系。",
         "method": "开发目标级 RGB-D 流程，将语义分割、标记物位姿估计、跨视角目标关联和质量门控融合连接到统一的度量参考系。",
         "result": "6 个裂缝目标：长度 MAE 2.17 mm，平均宽度 MAE 0.22 mm；2 个剥落目标：面积 MARE 2.90%，平均深度 MARE 3.21%。论文准备中。",
@@ -323,7 +325,7 @@
         "id": "railway",
         "title": "隧道小导管检测与定位",
         "meta": "2023—2024 · 大学生科研训练项目负责人 · 西南交通大学",
-        "subtitle": "超前小导管识别 · 导师：Prof. Min Chen",
+        "subtitle": "超前小导管识别 · 导师：<a href=\"https://faculty.swjtu.edu.cn/chenmin/zh_CN/index.htm\">Prof. Min Chen</a>",
         "q": "人工检查难以持续记录隧道超前支护小导管的位置与间距，希望将现场图像转化为可量化的检查信息。",
         "method": "带领构建 6,000 余幅现场图像数据集并训练 YOLO 检测器，结合双目标定与 SGBM 深度估计，将图像检测连接到三维位置；探索模型剪枝和 ONNX 部署。",
         "result": "初步 AP@0.5 ≈ 0.80，完成目标检测与双目深度定位的原型集成。",
@@ -341,8 +343,8 @@
       {
         "id": "urban",
         "title": "香港街景美感与独特性",
-        "meta": "2026—至今 · 硕士研究项目 · GIFT Lab",
-        "subtitle": "香港街景分析 · 导师：Prof. Xiao Li",
+        "meta": "2026—至今 · 硕士研究项目 · <a href=\"https://www.geo-gift-lab.com/\">GIFT Lab</a>",
+        "subtitle": "香港街景分析 · 导师：<a href=\"https://www.geo-gift-lab.com/people\">Prof. Xiao Li</a>",
         "q": "平均审美分数可能掩盖评价分歧，希望识别兼具美感与视觉独特性的香港街景。",
         "method": "实现七编码器投票集成、5,000 次 bootstrap 分析与多层 kNN 独特性评分，并连接空间聚合和 GIS 导出。",
         "result": "完成 56,530 幅香港全景图（226,120 个方向视图）的推理，筛选出 435 个视图级候选，进入后续空间分析。",
@@ -364,7 +366,7 @@
       {
         "id": "nerf",
         "title": "用 NeRF 重建历史建筑",
-        "meta": "2024 · 大学生科研训练项目 · 导师：Prof. Guoxiang Liu",
+        "meta": "2024 · 大学生科研训练项目 · 导师：<a href=\"https://faculty.swjtu.edu.cn/liuguoxiang\">Prof. Guoxiang Liu</a>",
         "text": "使用文殊院的无人机与地面影像，探索历史建筑的 NeRF 重建。",
         "q": "探索如何利用多视角照片记录历史建筑。",
         "method": "使用成都文殊院采集的无人机与地面影像，开展 NeRF 重建。",
@@ -373,7 +375,7 @@
       {
         "id": "gpp",
         "title": "成都地区精细尺度 GPP 估算",
-        "meta": "2024—2025 · 本科毕业论文 · 导师：Prof. Xiaodan Wu",
+        "meta": "2024—2025 · 本科毕业论文 · 导师：<a href=\"https://faculty.swjtu.edu.cn/wuxiaodan/zh_CN/index/837397/list/index.htm\">Prof. Xiaodan Wu</a>",
         "text": "基于 HLS 与 FLUXNET 数据，使用植被类型对应的 SVM 模型估算成都地区 GPP。",
         "q": "为局地生态分析估算更精细尺度的植被总初级生产力。",
         "method": "整合 HLS v2.0 与 FLUXNET，在 GEE、Python 和 MATLAB 中建立植被类型对应的 SVM 模型。",
@@ -392,11 +394,11 @@
     "build_title": "项目",
     "build_intro": "两个公开项目，展示空间方法如何落到城市应用和可复现的研究工作流。",
     "film_title": "🎬 HKFilmMap",
-    "film_meta": "香港理工大学 LSGI541 · 2025/26 第二学期 · 课程项目",
+    "film_meta": "理大 LSGI541 · Android 课程项目 · Web 更新",
     "film_q": "如何把静态的电影取景地清单，变成可以实际探索的城市路线？",
-    "film_method": "用 Python 整理电影与场景数据，构建 Room/SQLite 数据库，在 Android 中实现地图浏览、场景打卡和半日路线规划。",
+    "film_method": "开发 Android 地图、Room/SQLite 目录与半日行程规划；新增双语 Web 地图、可编辑行程和个人地点笔记。",
     "film_result": "68 部电影 · 97 个地点 · 142 条场景记录（85 条含可用坐标）。",
-    "film_caption": "HKFilmMap · 项目概念图",
+    "film_caption": "HKFilmMap · Web 电影地图",
     "skill_title": "gee-agent-skill",
     "skill_meta": "公开实例 · gee-agent-skill",
     "skill_q": "如何让 AI 辅助的地理空间分析仍然可审阅、可追溯和可复现？",
@@ -465,7 +467,7 @@
     "about_title": "关于我",
     "education_title": "教育经历",
     "awards_title": "奖项",
-    "about_text": "你好，我是吴艺楷，目前在香港理工大学攻读城市信息学与智慧城市硕士，预计 2027 年 1 月毕业。本科就读于西南交通大学遥感科学与技术专业。我在合肥长大，先后在成都和香港求学。",
+    "about_text": "你好，我是吴艺楷，目前在<a href=\"https://www.polyu.edu.hk/\">香港理工大学</a>攻读城市信息学与智慧城市硕士，预计 2027 年 1 月毕业。本科就读于<a href=\"https://www.swjtu.edu.cn/\">西南交通大学</a>遥感科学与技术专业。我在合肥长大，先后在成都和香港求学。",
     "about_work": "目前，我参与多视角 RGB-D 基础设施缺陷量测和香港街景分析。此前做过隧道小导管检测、历史建筑重建及植被生产力估算，研究兴趣主要包括：",
     "interests": [
       {
@@ -495,6 +497,8 @@
       "长丰岗集衡安学校"
     ],
     "wechat_note": "扫码添加微信，欢迎备注姓名与来意。",
-    "close": "关闭"
+    "close": "关闭",
+    "film_web": "打开 Web 地图",
+    "film_report": "课程报告"
   }
 }

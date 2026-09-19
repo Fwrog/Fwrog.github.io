@@ -4,7 +4,7 @@
 <img class="profile-portrait" src="{{ "/images/personal/yikai-wu.jpg" | relative_url }}" width="2040" height="2968" alt="Yikai Wu / 吴艺楷">
 <h1 id="research-title">Yikai Wu <span>吴艺楷</span></h1>
 <p class="profile-role">{{ t.profile_role }}</p>
-<p>The Hong Kong Polytechnic University</p>
+<p><a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University</a></p>
 <p class="profile-links"><a href="mailto:yi-kai.wu@connect.polyu.hk">Email</a> · <a href="https://github.com/Fwrog">GitHub</a> · <a href="https://orcid.org/0009-0004-2501-7877">ORCID</a> · <a href="https://www.researchgate.net/profile/Yikai-Wu-3">ResearchGate</a> · <a href="{{ '/files/Yikai_Wu_CV.pdf' | relative_url }}">CV</a> · <button class="text-button" type="button" id="wechat-open">WeChat</button></p>
 <dialog id="wechat-dialog"><button type="button" class="dialog-close">{{ t.close }} ×</button><img src="{{ "/images/personal/wechat.jpg" | relative_url }}" width="888" height="1131" alt="WeChat QR code"><p>{{ t.wechat_note }}</p></dialog>
 <figure class="journey-map-card"><div id="journey-map-{{ include.lang }}" class="leaflet-journey-map" data-map-lang="{{ include.lang }}" aria-label="{{ t.journey }}"><p class="map-fallback">{{ t.map_fallback }}</p></div><figcaption>{{ t.map_hint }}</figcaption><button type="button" class="map-reset" hidden>{% if include.lang == 'zh' %}完整轨迹{% else %}Full route{% endif %}</button></figure>
@@ -18,7 +18,7 @@
   <article><p class="news-date">2025/26 · PolyU</p><p>{{ t.news_film }} <a href="#project-film">HKFilmMap →</a></p></article></div>
 </section>
 
-<section class="portfolio-section" id="education"><h2>{{ t.education_title }}</h2><div class="education-row"><span>2025–2027</span><div><strong>The Hong Kong Polytechnic University</strong><p>{{ t.poly }}</p></div></div><div class="education-row"><span>2021–2025</span><div><strong>Southwest Jiaotong University</strong><p>{{ t.swjtu }}</p></div></div></section>
+<section class="portfolio-section" id="education"><h2>{{ t.education_title }}</h2><div class="education-row"><span>2025–2027</span><div><strong><a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University</a></strong><p>{{ t.poly }}</p></div></div><div class="education-row"><span>2021–2025</span><div><strong><a href="https://www.swjtu.edu.cn/">Southwest Jiaotong University</a></strong><p>{{ t.swjtu }}</p></div></div></section>
 <section class="portfolio-section publications-section" id="publications" aria-labelledby="publications-title">
   <header class="section-heading"><h2 id="publications-title">{{ t.publications }}</h2></header>
   <div class="publication-groups"><div class="status-column"><h3>{{ t.published }} · 02</h3><ol class="publication-list">
@@ -41,7 +41,7 @@
 <section class="portfolio-section selected-work" id="builds" aria-labelledby="builds-title">
   <header class="section-heading"><h2 id="builds-title">{{ t.build_title }}</h2></header>
   <article class="project-proof" id="project-film">
-    <div class="project-story"><p class="project-domain">{{ t.film_meta }}</p><h3>{{ t.film_title }}</h3><dl class="project-brief"><div><dt>{{ t.labels[0] }}</dt><dd>{{ t.film_q }}</dd></div><div><dt>{{ t.labels[1] }}</dt><dd>{{ t.film_method }}</dd></div><div><dt>{{ t.labels[2] }}</dt><dd>{{ t.film_result }}</dd></div></dl><p class="project-links"><a href="https://github.com/Fwrog/HKFilmMap">{{ t.repo }} ↗</a><a href="https://github.com/Fwrog/HKFilmMap/blob/master/docs/media/demo.mp4">{{ t.demo }} ↗</a><a href="https://github.com/Fwrog/HKFilmMap/blob/master/docs/PROJECT_DESCRIPTION.md">{{ t.documentation }} ↗</a></p></div>
+    <div class="project-story"><p class="project-domain">{{ t.film_meta }}</p><h3>{{ t.film_title }}</h3><dl class="project-brief"><div><dt>{{ t.labels[0] }}</dt><dd>{{ t.film_q }}</dd></div><div><dt>{{ t.labels[1] }}</dt><dd>{{ t.film_method }}</dd></div><div><dt>{{ t.labels[2] }}</dt><dd>{{ t.film_result }}</dd></div></dl><p class="project-links"><a href="https://fwrog.github.io/HKFilmMap/{% if include.lang == 'zh' %}?lang=zh{% endif %}">{{ t.film_web }} ↗</a><a href="https://github.com/Fwrog/HKFilmMap">{{ t.repo }} ↗</a><a href="https://fwrog.github.io/HKFilmMap/report/HKFilmMap_Project_Report_Public.pdf">{{ t.film_report }} ↗</a><a href="https://github.com/Fwrog/HKFilmMap/blob/master/docs/media/demo.mp4">{{ t.demo }} ↗</a><a href="https://fwrog.github.io/HKFilmMap/project.html{% if include.lang == 'zh' %}?lang=zh{% endif %}">{{ t.documentation }} ↗</a></p></div>
   </article>
   <article class="project-proof project-proof--reverse" id="project-gee">
     <div class="project-story"><p class="project-domain">{{ t.skill_meta }}</p><h3>{{ t.skill_title }}</h3><dl class="project-brief"><div><dt>{{ t.labels[0] }}</dt><dd>{{ t.skill_q }}</dd></div><div><dt>{{ t.labels[1] }}</dt><dd>{{ t.skill_method }}</dd></div><div><dt>{{ t.labels[2] }}</dt><dd>{{ t.skill_result }}</dd></div></dl><p class="project-links"><a href="https://github.com/Fwrog/gee-agent-skill">{{ t.repo }} ↗</a><a href="https://github.com/Fwrog/gee-agent-skill/blob/main/docs/validation/hk_ndvi_product_intercomparison_v03.md">{{ t.report }} ↗</a></p></div>
