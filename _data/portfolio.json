@@ -226,10 +226,6 @@
       {
         "title": "Remote sensing & geospatial analysis",
         "text": "extracting environmental and urban information from satellite and street-view imagery."
-      },
-      {
-        "title": "Active perception",
-        "text": "understanding how viewpoint selection can support spatial understanding."
       }
     ],
     "about_personal": "I also enjoy building mapping applications and small research tools. Feel free to get in touch by email 👋",
@@ -248,7 +244,9 @@
     "wechat_note": "Scan to connect on WeChat. Please include your name and a short introduction.",
     "close": "Close",
     "film_web": "Open Web atlas",
-    "film_report": "Course report"
+    "film_report": "Course report",
+    "debate_title": "Geosciences Debate Team",
+    "debate_caption": "My first Christmas with the Geosciences debate team 🎄"
   },
   "zh": {
     "role": "遥感 · 多模态视觉 · 空间理解",
@@ -477,10 +475,6 @@
       {
         "title": "遥感与地理空间分析",
         "text": "从卫星影像和街景中提取环境与城市空间信息。"
-      },
-      {
-        "title": "主动感知",
-        "text": "关注观测视角的选择及其对空间理解的影响。"
       }
     ],
     "about_personal": "研究之外，也喜欢做一些地图应用和研究工具。欢迎通过邮件交流 👋",
@@ -499,6 +493,8 @@
     "wechat_note": "扫码添加微信，欢迎备注姓名与来意。",
     "close": "关闭",
     "film_web": "打开 Web 地图",
-    "film_report": "课程报告"
+    "film_report": "课程报告",
+    "debate_title": "地学学院辩论队",
+    "debate_caption": "我在地学学院辩论队的第一次圣诞节 🎄"
   }
 }

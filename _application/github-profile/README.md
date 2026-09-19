@@ -1,4 +1,4 @@
-<a href="https://fwrog.github.io/"><img src="github-profile/assets/header.svg" width="100%" alt="Hi, I’m Yikai — vision, maps and little experiments. Hefei → Chengdu → Hong Kong."></a>
+<a href="https://fwrog.github.io/"><img src="assets/header.svg" width="100%" alt="Hi, I’m Yikai — vision, maps and little experiments. Hefei → Chengdu → Hong Kong."></a>
 
 <p align="center">
   <a href="https://fwrog.github.io/">Website</a> ·

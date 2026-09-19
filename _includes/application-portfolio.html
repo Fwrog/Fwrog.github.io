@@ -1,12 +1,12 @@
 {% assign t = site.data.portfolio[include.lang] %}
 <div class="academic-layout">
 <aside class="profile-column" id="journey">
-<img class="profile-portrait" src="{{ "/images/personal/yikai-wu.jpg" | relative_url }}" width="2040" height="2968" alt="Yikai Wu / 吴艺楷">
+<img class="profile-portrait" src="{{ "/images/personal/yikai-wu-web.webp" | relative_url }}" width="444" height="646" fetchpriority="high" decoding="async" alt="Yikai Wu / 吴艺楷">
 <h1 id="research-title">Yikai Wu <span>吴艺楷</span></h1>
 <p class="profile-role">{{ t.profile_role }}</p>
 <p><a href="https://www.polyu.edu.hk/">The Hong Kong Polytechnic University</a></p>
 <p class="profile-links"><a href="mailto:yi-kai.wu@connect.polyu.hk">Email</a> · <a href="https://github.com/Fwrog">GitHub</a> · <a href="https://orcid.org/0009-0004-2501-7877">ORCID</a> · <a href="https://www.researchgate.net/profile/Yikai-Wu-3">ResearchGate</a> · <a href="{{ '/files/Yikai_Wu_CV.pdf' | relative_url }}">CV</a> · <button class="text-button" type="button" id="wechat-open">WeChat</button></p>
-<dialog id="wechat-dialog"><button type="button" class="dialog-close">{{ t.close }} ×</button><img src="{{ "/images/personal/wechat.jpg" | relative_url }}" width="888" height="1131" alt="WeChat QR code"><p>{{ t.wechat_note }}</p></dialog>
+<dialog id="wechat-dialog"><button type="button" class="dialog-close">{{ t.close }} ×</button><img data-src="{{ "/images/personal/wechat.jpg" | relative_url }}" width="888" height="1131" loading="lazy" decoding="async" alt="WeChat QR code"><p>{{ t.wechat_note }}</p></dialog>
 <figure class="journey-map-card"><div id="journey-map-{{ include.lang }}" class="leaflet-journey-map" data-map-lang="{{ include.lang }}" aria-label="{{ t.journey }}"><p class="map-fallback">{{ t.map_fallback }}</p></div><figcaption>{{ t.map_hint }}</figcaption><button type="button" class="map-reset" hidden>{% if include.lang == 'zh' %}完整轨迹{% else %}Full route{% endif %}</button></figure>
 <div class="journey-chapters">{% for place in t.places %}<div class="journey-chapter" id="chapter-{{ place.id }}"><button class="place-select" type="button" data-place="{{ place.id }}" aria-controls="journey-map-{{ include.lang }}"><strong>{{ place.name }}</strong><span>{{ place.period }}</span></button>{% if place.id == "hefei" %}<details class="school-details"><summary>{{ t.schools_label }}</summary><ul>{% for school in t.schools %}<li>{{ school }}</li>{% endfor %}</ul></details>{% endif %}</div>{% endfor %}</div>
 </aside>
@@ -14,7 +14,7 @@
 <section class="portfolio-section about-section" id="research"><span id="about" class="anchor"></span><h2>{{ t.about_title }}</h2><p>{{ t.about_text }}</p><p>{{ t.about_work }}</p><ul class="interest-list">{% for interest in t.interests %}<li><strong>{{ interest.title }}</strong> — {{ interest.text }}</li>{% endfor %}</ul><p>{{ t.about_personal }}</p></section>
 <section class="portfolio-section news-section" id="news" aria-labelledby="news-title">
   <header class="section-heading"><h2 id="news-title">{{ t.news_title }}</h2></header>
-  <div class="news-list"><article id="hit-workshop"><p class="news-date">2026 · HIT</p><div><p>{{ t.workshop_text }}</p><details><summary>{{ t.news_photo }}</summary><figure><img src="{{ '/images/journey/hit-workshop-2026.jpg' | relative_url }}" width="1920" height="1280" loading="lazy" alt="{{ t.workshop_caption }}"><figcaption>{{ t.workshop_caption }}</figcaption></figure></details></div></article>
+  <div class="news-list"><article id="hit-workshop"><p class="news-date">2026 · HIT</p><div><p>{{ t.workshop_text }}</p><details><summary>{{ t.news_photo }}</summary><figure><img src="{{ '/images/journey/hit-workshop-2026-web.webp' | relative_url }}" width="960" height="640" loading="lazy" decoding="async" alt="{{ t.workshop_caption }}"><figcaption>{{ t.workshop_caption }}</figcaption></figure></details></div></article>
   <article><p class="news-date">2025/26 · PolyU</p><p>{{ t.news_film }} <a href="#project-film">HKFilmMap →</a></p></article></div>
 </section>
 
@@ -48,5 +48,7 @@
   </article>
 </section>
 
-<section class="portfolio-section service-section" id="service"><h2>{{ t.service_title }}</h2><h3>{{ t.service_org }}</h3><p class="service-role">{{ t.service_role }}</p><p>{{ t.service_text }}</p><div class="service-photos"><figure><a href="{{ '/images/personal/surveying-team.jpg' | relative_url }}"><img src="{{ '/images/personal/surveying-team.jpg' | relative_url }}" loading="lazy" width="5568" height="3712" alt="{{ t.team_caption }}"></a><figcaption>{{ t.team_caption }}</figcaption></figure><figure><a href="{{ '/images/personal/surveying-association.jpg' | relative_url }}"><img src="{{ '/images/personal/surveying-association.jpg' | relative_url }}" loading="lazy" width="5568" height="3128" alt="{{ t.group_caption }}"></a><figcaption>{{ t.group_caption }}</figcaption></figure></div></section>
+<section class="portfolio-section service-section" id="service"><h2>{{ t.service_title }}</h2><h3>{{ t.service_org }}</h3><p class="service-role">{{ t.service_role }}</p><p>{{ t.service_text }}</p><div class="service-photos"><figure><a href="{{ '/images/personal/surveying-team.jpg' | relative_url }}"><img src="{{ '/images/personal/surveying-team-web.webp' | relative_url }}" loading="lazy" decoding="async" width="640" height="427" alt="{{ t.team_caption }}"></a><figcaption>{{ t.team_caption }}</figcaption></figure><figure><a href="{{ '/images/personal/surveying-association.jpg' | relative_url }}"><img src="{{ '/images/personal/surveying-association-web.webp' | relative_url }}" loading="lazy" decoding="async" width="640" height="360" alt="{{ t.group_caption }}"></a><figcaption>{{ t.group_caption }}</figcaption></figure></div>
+<div class="campus-memory"><h3>{{ t.debate_title }}</h3><figure><a href="{{ '/images/personal/debate-christmas.png' | relative_url }}"><img src="{{ '/images/personal/debate-christmas-web.webp' | relative_url }}" width="640" height="426" loading="lazy" decoding="async" alt="{{ t.debate_caption }}"></a><figcaption>{{ t.debate_caption }}</figcaption></figure></div>
+</section>
 <section class="portfolio-section" id="awards"><h2>{{ t.awards_title }}</h2><p>{{ t.awards }}</p></section></div></div>

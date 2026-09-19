@@ -1,13 +1,10 @@
-{% unless page.body_class == "portfolio-page" %}
+{% if page.body_class == "portfolio-page" %}
+<script defer src="{{ '/assets/js/profile.js?v=20260919-performance' | relative_url }}"></script>
+<script defer src="{{ '/assets/lib/leaflet/leaflet.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/journey.js?v=20260919-curves' | relative_url }}"></script>
+{% else %}
 <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
 {% include fetch_google_scholar_stats.html %}
-{% endunless %}
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""></script>
-{% if page.body_class == "portfolio-page" %}
-<script src="{{ '/assets/js/journey.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/profile.js' | relative_url }}"></script>
 {% endif %}
 
 {% include analytics.html %}
